@@ -1,4 +1,5 @@
+package lonewolf;
+
 public class Monster {
 
-    Hello hello test
 }
