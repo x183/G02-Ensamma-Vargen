@@ -24,7 +24,7 @@ public class LoneWolf extends Application{
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
-                lonewolf.Model.getInstance().shutDown();
+                Model.getInstance().shutDown();
             }
         }));
     }
