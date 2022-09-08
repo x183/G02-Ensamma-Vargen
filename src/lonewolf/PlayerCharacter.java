@@ -1,4 +1,5 @@
 package lonewolf;
 
-public interface PlayerCharacter {
+public interface PlayerCharacter extends Character{
+
 }
