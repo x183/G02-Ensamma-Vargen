@@ -1,5 +1,5 @@
 package lonewolf;
 
-public class Monster {
+public class Monster implements Character{
 
 }
