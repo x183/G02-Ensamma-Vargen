@@ -10,12 +10,12 @@ public class LoneWolf extends Application{
     @Override
     public void start(Stage stage) throws Exception {
 
-
-        FXMLLoader root=new FXMLLoader(getClass().getResource("lonewolf/LoneWolf.fxml"));
+        FXMLLoader root=new FXMLLoader(getClass().getResource("LoneWolf.fxml"));
 
         Scene scene = new Scene(root.load());
 
         stage.setScene(scene);
+        stage.setResizable(false);   //remove if want to make window resizable again
         stage.show();
     }
 
