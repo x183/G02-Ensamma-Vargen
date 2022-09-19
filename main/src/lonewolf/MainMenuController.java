@@ -5,7 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 
-public class LoneWolfController {
+import javax.swing.*;
+
+public class MainMenuController {
 
         @FXML
         private StackPane mainmenuStackPane;
@@ -21,11 +23,10 @@ public class LoneWolfController {
         @FXML
         private ImageView mainmenuBG;
 
-
         public void aboutpageToButton(){
                 aboutpageStackPane.toFront();
         }
-        public void aboutopageBackButton(){
+        public void aboutpageBackButton(){
                 mainmenuStackPane.toFront();
         }
 }
