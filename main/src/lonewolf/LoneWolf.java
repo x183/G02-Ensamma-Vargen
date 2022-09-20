@@ -10,7 +10,7 @@ public class LoneWolf extends Application{
     @Override
     public void start(Stage stage) throws Exception {
 
-        FXMLLoader root=new FXMLLoader(getClass().getResource("LoneWolf.fxml"));
+        FXMLLoader root=new FXMLLoader(getClass().getResource("MainMenu.fxml"));
 
         Scene scene = new Scene(root.load());
 
