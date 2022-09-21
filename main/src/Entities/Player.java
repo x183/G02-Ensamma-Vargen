@@ -13,5 +13,14 @@ public class Player extends ACharacter {
         public double getStrength(){
                 return this.Strength;
         }
+        public double getHealth(){
+                return this.Health;
+        }
+        public double getArmour(){
+                return this.Armour;
+        }
+        public String getName(){
+                return this.Name;
+        }
 
 }
