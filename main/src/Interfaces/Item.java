@@ -1,4 +1,4 @@
-package lonewolf;
+package Interfaces;
 
 public interface Item {
     

@@ -1,5 +1,3 @@
-package lonewolf;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -9,6 +7,7 @@ import javax.swing.*;
 
 public class MainMenuController {
 
+        //stackpanes
         @FXML
         private StackPane mainmenuStackPane;
         @FXML
@@ -19,6 +18,7 @@ public class MainMenuController {
         private Button aboutpageBackButton;
         @FXML
         private Button mainmenuAboutPageButton;
+
         //background images
         @FXML
         private ImageView mainmenuBG;

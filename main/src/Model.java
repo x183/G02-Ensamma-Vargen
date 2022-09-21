@@ -1,5 +1,3 @@
-package lonewolf;
-
 public class Model {
     private static Model instance = null;
 
