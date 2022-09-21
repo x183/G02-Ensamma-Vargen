@@ -10,4 +10,8 @@ public class Player extends ACharacter {
                 this.Name = Name;
         }
 
+        public double getStrength(){
+                return this.Strength;
+        }
+
 }
