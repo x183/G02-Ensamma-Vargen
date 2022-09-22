@@ -13,5 +13,9 @@ public class CreatureFactory
         {
             return new Monster(1, 1, 0, "Rabbit");
         }
+        public static Monster createOrc()
+        {
+            return new Monster(8,4,2,"Orc");
+        }
 
 }
