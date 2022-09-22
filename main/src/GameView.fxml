@@ -9,12 +9,14 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.TextFlow?>
 
-
 <AnchorPane prefHeight="512.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="GameImage" fitHeight="512.0" fitWidth="640.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="ChoiceButton2" layoutX="293.0" layoutY="394.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="ChoiceButton1" layoutX="294.0" layoutY="323.0" mnemonicParsing="false" text="Button" />
+      <ImageView fx:id="GameImage" fitHeight="512.0" fitWidth="640.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/GreenWoods.png" />
+         </image></ImageView>
+      <Button fx:id="ChoiceButton2" layoutX="294.0" layoutY="354.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="ChoiceButton1" layoutX="294.0" layoutY="306.0" mnemonicParsing="false" text="Button" />
       <TextFlow fx:id="TextBox" layoutX="93.0" layoutY="57.0" opacity="0.5" prefHeight="200.0" prefWidth="454.0" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
@@ -32,5 +34,7 @@
             <Image url="@images/kryss.png" />
          </image>
       </ImageView>
+      <Button fx:id="ChoiceButton3" layoutX="294.0" layoutY="403.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="ChoiceButton4" layoutX="294.0" layoutY="447.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>

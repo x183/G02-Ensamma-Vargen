@@ -20,4 +20,10 @@ public class NewGameController {
     @FXML
     private Button ChoiceButton2;
 
+    @FXML
+    private Button ChoiceButton3;
+
+    @FXML
+    private Button ChoiceButton4;
+
 }
