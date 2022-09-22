@@ -7,4 +7,5 @@ public abstract class ACharacter implements ICharacter {
         double Strength;
         double Health;
 
+
 }
