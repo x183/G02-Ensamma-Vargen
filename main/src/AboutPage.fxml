@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="512.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AboutPageController">
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
@@ -38,7 +37,7 @@
                   <Font name="Perpetua" size="24.0" />
                </font>
             </Text>
-            <Button fx:id="aboutpageBackButton" layoutX="294.0" layoutY="473.0" mnemonicParsing="false" text="Back" />
+            <Button fx:id="aboutPageBackButton" layoutX="294.0" layoutY="473.0" mnemonicParsing="false" onAction="#pressedAboutPageBackButton" text="Back" />
          </children>
       </Pane>
    </children>

@@ -47,7 +47,7 @@
                   <Font name="Perpetua" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="mainmenuAboutPageButton" layoutX="294.0" layoutY="368.0" mnemonicParsing="false" text="About">
+            <Button fx:id="mainmenuAboutPageButton" layoutX="294.0" layoutY="368.0" mnemonicParsing="false" onAction="#pressedAboutPageButton" text="About">
                <font>
                   <Font name="Perpetua" size="14.0" />
                </font>
