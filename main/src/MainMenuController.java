@@ -11,12 +11,9 @@ public class MainMenuController{
         //stackpanes
         @FXML
         private StackPane mainmenuStackPane;
-        /* @FXML
-        private StackPane aboutpageStackPane; */
 
         //buttons
-        @FXML
-        private Button aboutpageBackButton;
+
         @FXML
         private Button mainmenuAboutPageButton;
 
@@ -24,30 +21,6 @@ public class MainMenuController{
         @FXML
         private ImageView mainmenuBG;
 
-       // private AboutPageController aboutPageController = new AboutPageController();
-
-        Stage thisStage;
-
-        public void setStage (Stage stage){
-                thisStage = stage;
-        }
-
-        public void showStage(){
-                //thisStage.setTitle("");
-                thisStage.show();
-        }
-
-        public void openAboutPage() {
 
 
-        }
-
-
-        /* public void aboutpageToButton(){
-                aboutpageStackPane.toFront();
-        }
-
-        public void aboutpageBackButton(){
-                mainmenuStackPane.toFront();
-        } */
 }

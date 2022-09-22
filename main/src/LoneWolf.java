@@ -1,11 +1,12 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.net.URL;
+import java.io.FileInputStream;
+import java.util.Objects;
 
 public class LoneWolf extends Application{
 
@@ -22,14 +23,14 @@ public class LoneWolf extends Application{
     } */
    @Override
    public void start(Stage stage) throws Exception {
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
-       fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
-       Parent root = (Parent) fxmlLoader.load();
+       Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainMenu.fxml")));
        Scene scene = new Scene(root);
+       stage.setTitle("Lone Wolf");
+       Image icon = new Image("images/lonewolflogo.png");
+       stage.getIcons().add(icon);
        stage.setScene(scene);
-       MainMenuController mainController = fxmlLoader.getController();
-       mainController.setStage(stage);
-       mainController.showStage();
+       stage.setResizable(false);
+       stage.show();
    }
     public static void main(String[] args) {
         launch(args);

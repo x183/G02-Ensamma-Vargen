@@ -38,7 +38,7 @@
                   <Font name="Perpetua" size="24.0" />
                </font>
             </Text>
-            <Button fx:id="aboutpageBackButton" layoutX="294.0" layoutY="473.0" mnemonicParsing="false" onAction="#aboutpageBackButton" onMouseClicked="#aboutpageBackButton" text="Back" />
+            <Button fx:id="aboutpageBackButton" layoutX="294.0" layoutY="473.0" mnemonicParsing="false" text="Back" />
          </children>
       </Pane>
    </children>
