@@ -2,16 +2,17 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 
-public class MainMenuController {
+public class MainMenuController{
 
         //stackpanes
         @FXML
         private StackPane mainmenuStackPane;
-        @FXML
-        private StackPane aboutpageStackPane;
+        /* @FXML
+        private StackPane aboutpageStackPane; */
 
         //buttons
         @FXML
@@ -23,10 +24,30 @@ public class MainMenuController {
         @FXML
         private ImageView mainmenuBG;
 
-        public void aboutpageToButton(){
+       // private AboutPageController aboutPageController = new AboutPageController();
+
+        Stage thisStage;
+
+        public void setStage (Stage stage){
+                thisStage = stage;
+        }
+
+        public void showStage(){
+                //thisStage.setTitle("");
+                thisStage.show();
+        }
+
+        public void openAboutPage() {
+
+
+        }
+
+
+        /* public void aboutpageToButton(){
                 aboutpageStackPane.toFront();
         }
+
         public void aboutpageBackButton(){
                 mainmenuStackPane.toFront();
-        }
+        } */
 }
