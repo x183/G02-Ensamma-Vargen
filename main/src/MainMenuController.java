@@ -1,21 +1,23 @@
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.util.Objects;
 
-public class MainMenuController {
+public class MainMenuController{
 
         //stackpanes
         @FXML
         private StackPane mainmenuStackPane;
-        @FXML
-        private StackPane aboutpageStackPane;
 
         //buttons
-        @FXML
-        private Button aboutpageBackButton;
+
         @FXML
         private Button mainmenuAboutPageButton;
 
@@ -23,10 +25,10 @@ public class MainMenuController {
         @FXML
         private ImageView mainmenuBG;
 
-        public void aboutpageToButton(){
-                aboutpageStackPane.toFront();
+        public void pressedAboutPageButton() throws Exception{
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AboutPage.fxml")));
+                Stage aboutStage = (Stage) mainmenuAboutPageButton.getScene().getWindow();
+                aboutStage.setScene(new Scene(root));
         }
-        public void aboutpageBackButton(){
-                mainmenuStackPane.toFront();
-        }
+
 }
