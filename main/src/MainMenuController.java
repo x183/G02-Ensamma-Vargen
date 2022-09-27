@@ -19,7 +19,7 @@ public class MainMenuController{
         //buttons
 
         @FXML
-        private Button mainmenuAboutPageButton;
+        private Button mainmenuAboutPageButton, mainmenuNewGameButton;
 
         //background images
         @FXML
@@ -28,6 +28,11 @@ public class MainMenuController{
         public void pressedAboutPageButton() throws Exception{
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AboutPage.fxml")));
                 Stage aboutStage = (Stage) mainmenuAboutPageButton.getScene().getWindow();
+                aboutStage.setScene(new Scene(root));
+        }
+        public void pressedNewGamePageButton() throws Exception{
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("NewGame.fxml")));
+                Stage aboutStage = (Stage) mainmenuNewGameButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
         }
 

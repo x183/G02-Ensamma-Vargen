@@ -27,7 +27,7 @@
                   <Font name="Perpetua" size="32.0" />
                </font>
             </Text>
-            <Button layoutX="282.0" layoutY="238.0" mnemonicParsing="false" text="New Game">
+            <Button fx:id="mainmenuNewGameButton" layoutX="282.0" layoutY="238.0" mnemonicParsing="false" onAction="#pressedNewGamePageButton" text="New Game">
                <font>
                   <Font name="Perpetua" size="14.0" />
                </font>
