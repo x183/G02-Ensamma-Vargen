@@ -1,4 +1,4 @@
-package Entities;
+package Model.Entities;
 
 public class Player extends ACharacter {
         double Armour;

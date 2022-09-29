@@ -1,4 +1,4 @@
-package Entities;
+package Model.Entities;
 
 public class Monster extends ACharacter {
             double Armour;

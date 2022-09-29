@@ -1,3 +1,5 @@
+package Controller;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,7 +9,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.Objects;
 
 public class AboutPageController extends AnchorPane {
@@ -18,7 +19,7 @@ public class AboutPageController extends AnchorPane {
         private Button aboutPageBackButton;
 
         public void pressedAboutPageBackButton() throws Exception{
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainMenu.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/MainMenu.fxml")));
                 Stage aboutStage = (Stage) aboutPageBackButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
         }

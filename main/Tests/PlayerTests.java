@@ -1,11 +1,11 @@
-import Entities.Monster;
-import Entities.Player;
+import Model.Entities.Player;
+import Model.Factories.PlayerFactory;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerTests {
         Player testPlayer1 = new Player(2,2,2, "Stocken");
-        Player testPlayer2 = Factories.PlayerFactory.createPlayer(3, 4, 5, "Pixie");
+        Player testPlayer2 = PlayerFactory.createPlayer(3, 4, 5, "Pixie");
 
 
 

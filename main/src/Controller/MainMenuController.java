@@ -1,3 +1,5 @@
+package Controller;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,7 +9,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.util.Objects;
 
 public class MainMenuController{
@@ -26,12 +27,12 @@ public class MainMenuController{
         private ImageView mainmenuBG;
 
         public void pressedAboutPageButton() throws Exception{
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AboutPage.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/AboutPage.fxml")));
                 Stage aboutStage = (Stage) mainmenuAboutPageButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
         }
         public void pressedNewGamePageButton() throws Exception{
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("NewGame.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/NewGame.fxml")));
                 Stage aboutStage = (Stage) mainmenuNewGameButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
         }

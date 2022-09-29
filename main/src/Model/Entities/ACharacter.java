@@ -1,6 +1,6 @@
-package Entities;
+package Model.Entities;
 
-import Interfaces.ICharacter;
+import Model.Interfaces.ICharacter;
 
 public abstract class ACharacter implements ICharacter {
         String Name;

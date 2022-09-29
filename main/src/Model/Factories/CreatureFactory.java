@@ -1,6 +1,6 @@
-package Factories;
+package Model.Factories;
 
-import Entities.Monster;
+import Model.Entities.Monster;
 
 public class CreatureFactory
 {

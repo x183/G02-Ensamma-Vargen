@@ -1,3 +1,5 @@
+package Model;
+
 public class Model {
     private static Model instance = null;
 
