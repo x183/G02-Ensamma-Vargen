@@ -1,18 +1,16 @@
 package Model.Entities;
 
-public class Monster extends ACharacter {
+public class Monster extends Creature {
             double Armour;
     public Monster(double Strength, double Health, double Armour, String Name)
     {
-            this.Strength = Strength;
-            this.Health = Health;
+        super(Strength, Health, Name);
             this.Armour = Armour;
-            this.Name = Name;
+
 
     }
 
-    public double getStrength() {return this.Strength;}
-    public double getHealth() {return this.Health;}
+
     public double getArmour() {return this.Armour;}
-    public String getName() {return this.Name;}
+
 }
