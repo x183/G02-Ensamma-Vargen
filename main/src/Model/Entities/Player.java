@@ -1,5 +1,6 @@
 package Model.Entities;
 
+//The actual person you play as in the game, has an armour value
 public class Player extends ACharacter {
         double Armour;
 
@@ -9,7 +10,7 @@ public class Player extends ACharacter {
                 this.Armour = Armour;
 
         }
-
+        //Getter for armour
         public double getArmour(){
                 return this.Armour;
         }
