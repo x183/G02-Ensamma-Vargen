@@ -1,12 +1,13 @@
-import Entities.Monster;
+import Model.Entities.Monster;
+import Model.Factories.CreatureFactory;
 import org.junit.Test;
-import org.junit.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MonsterTests
 {
-    Monster TestRabbit1 = Factories.CreatureFactory.createRabbit();
-    Monster TestRabbit2 = Factories.CreatureFactory.createRabbit();
+    Monster TestRabbit1 = CreatureFactory.createRabbit();
+    Monster TestRabbit2 = CreatureFactory.createRabbit();
 
     @Test
     public void test()

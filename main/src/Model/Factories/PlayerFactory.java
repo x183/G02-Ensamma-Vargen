@@ -1,6 +1,6 @@
-package Factories;
+package Model.Factories;
 
-import Entities.Player;
+import Model.Entities.Player;
 
 public class PlayerFactory {
         public static Player createPlayer(double Strength, double Health, double Armour, String Name){
