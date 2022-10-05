@@ -12,7 +12,7 @@ public class MonsterTests
     @Test
     public void test()
     {
-        assertEquals(1, TestRabbit1.getHealth());
+        assertEquals(1, TestRabbit1.getmaxHealth());
         assertEquals(0, this.TestRabbit2.getArmour());
 
     }
