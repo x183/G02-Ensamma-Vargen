@@ -1,7 +1,5 @@
 package Model.Factories;
 
-import Model.Entities.Monster;
-
 public class CreatureFactory
 {
     public static Monster createMonster(double Strength, double Health, double Armour, String Name)
