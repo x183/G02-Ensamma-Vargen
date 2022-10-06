@@ -1,4 +1,5 @@
 import Model.Model;
+import Model.ModelController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,6 +23,8 @@ public class LoneWolf extends Application{
        stage.show();
    }
     public static void main(String[] args) {
+        /* Model model = new Model();
+        ModelController modelController = new ModelController(); */
         launch(args);
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override

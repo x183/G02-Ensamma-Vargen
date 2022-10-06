@@ -1,0 +1,9 @@
+{
+  "text": "After you ran away you trip and take 5 dmg to you health. Coward. As you're of the right path you turn around...",
+  "choice": [
+    {
+      "choice": "Keep walking",
+      "nextScenario": "test.json"
+    }
+  ]
+}
