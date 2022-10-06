@@ -1,20 +1,20 @@
-package Model.Forrest;
+package Model.Events;
 
 import java.util.List;
 
 //Paret class for all kinds of things that can happen in the game
 //An event is always triggered when the player moves to another part of the story
-public abstract class Event {
+public abstract class Events {
     String eventText;
     List<String> choices;
-    List<Event> choiceEvents;
+    List<Events> choiceEvents;
 
-    public Event nextEvent(int choice)
+    public Events nextEvent(int choice)
     {
         return choiceEvents.get(choice);
     }
 
-    public List<Event> getChoiceEvents()
+    public List<Events> getChoiceEvents()
     {
         return choiceEvents;
     }

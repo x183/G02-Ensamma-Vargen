@@ -1,7 +1,7 @@
 package Controller;
 
-import Model.Forrest.Choice;
-import Model.Forrest.Event;
+import Model.Events.Choice;
+import Model.Events.Events;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,7 +15,7 @@ import java.util.Objects;
 
 public class NewGameController {
 
-    Event event;
+    Events event;
 
     @FXML
     private TextArea textBox;
