@@ -1,8 +1,5 @@
-import Model.Entities.Monster;
 import Model.Factories.CreatureFactory;
 import org.junit.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class MonsterTests
 {
