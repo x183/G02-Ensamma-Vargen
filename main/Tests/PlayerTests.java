@@ -12,7 +12,7 @@ public class PlayerTests {
     @Test
         public void test(){
             assertEquals(2, testPlayer1.getStrength());
-            assertEquals(4, testPlayer2.getHealth());
+            assertEquals(4, testPlayer2.getmaxHealth());
         }
 
 
