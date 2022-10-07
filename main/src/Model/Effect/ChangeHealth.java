@@ -1,6 +1,7 @@
 package Model.Effect;
 
 import Model.Entities.*;
+import Model.Interfaces.IEffect;
 
 public class ChangeHealth implements IEffect
 {
