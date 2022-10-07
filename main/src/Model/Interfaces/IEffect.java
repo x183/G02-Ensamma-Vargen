@@ -1,4 +1,4 @@
-package Model.Effect;
+package Model.Interfaces;
 
 import Model.Entities.ACharacter;
 

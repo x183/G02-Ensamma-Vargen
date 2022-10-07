@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.Events.Choice;
+import Model.Events.Actions.Choice;
 import Model.Events.Events;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,7 +27,7 @@ public class NewGameController {
     private Button ChoiceButton1, ChoiceButton2, ChoiceButton3, ChoiceButton4, ExitButton;
 
     public void initialize() {
-        event = new Choice();
+        //event = new Choice();
         textBox.setText(event.getEventText());
     }
 

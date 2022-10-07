@@ -1,0 +1,12 @@
+{
+  "text": "You walk into the dark forrest. Certain you are on the right path. You look left and right...",
+  "choice": [
+    {
+      "combat": "wolf"
+    },
+    {
+      "choice": "Run away",
+      "nextScenario": "test2.json"
+    }
+  ]
+}

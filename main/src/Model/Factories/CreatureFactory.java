@@ -1,19 +1,21 @@
 package Model.Factories;
 
+import Model.Entities.Creature;
+
 public class CreatureFactory
 {
-    public static Monster createMonster(double Strength, double Health, double Armour, String Name)
+    public static Creature createMonster(boolean isHostile, double Strength, double Health, double Armour, String Name)
     {
-        return new Monster(Strength, Health, Armour, Name);
+        return new Creature(isHostile, Strength, Health, Name, Armour);
 
     }
-        public static Monster createRabbit()
+        public static Creature createRabbit()
         {
-            return new Monster(1, 1, 0, "Rabbit");
+            return new Creature(false, 1, 0, "Rabbit", 0);
         }
-        public static Monster createOrc()
+        public static Creature createOrc()
         {
-            return new Monster(8,4,2,"Orc");
+            return new Creature(true,4,2,"Orc", 4);
         }
 
 }
