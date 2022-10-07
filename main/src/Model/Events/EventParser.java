@@ -1,7 +1,6 @@
 package Model.Events;
 
 import Model.Entities.Creature;
-import Model.Entities.Monster;
 import Model.Events.Actions.Battle;
 import Model.Events.Actions.Choice;
 import Model.Factories.CreatureFactory;
@@ -87,7 +86,7 @@ public class EventParser {
                             double hp = Double.parseDouble(childAttributes.getNamedItem("hp").getNodeValue());
                             boolean isHostile = Boolean.parseBoolean(childAttributes.getNamedItem("isHostile").getNodeValue());
                            // creature = new Creature(name, isHostile, hp, str, armor);
-                            creature = CreatureFactory.createMonster(str, hp, armor, name);
+                            creature = CreatureFactory.createMonster(isHostile, str, hp, armor, name);
                         }
                     }
                     if (creature == null) {
