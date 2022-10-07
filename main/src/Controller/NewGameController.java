@@ -1,7 +1,6 @@
 package Controller;
 
-import Model.Events.Actions.Choice;
-import Model.Events.Events;
+import Model.Events.EventSuper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,7 +14,7 @@ import java.util.Objects;
 
 public class NewGameController {
 
-    Events event;
+    EventSuper event;
 
     @FXML
     private TextArea textBox;

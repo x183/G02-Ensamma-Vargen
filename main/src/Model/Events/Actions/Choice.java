@@ -2,7 +2,6 @@ package Model.Events.Actions;
 
 import Model.Entities.Player;
 import Model.Events.Event;
-import Model.Events.Events;
 import Model.Interfaces.IAction;
 import Model.Interfaces.IEffect;
 
