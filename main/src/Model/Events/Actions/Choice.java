@@ -33,6 +33,6 @@ public class Choice implements IAction {
 
     @Override
     public String getActionName() {
-        return null;
+        return flavourText;
     }
 }
