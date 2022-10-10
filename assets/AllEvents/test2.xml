@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<scenario>
+<event>
     <text>
         After you ran away you trip and take 5 damage to your health.
         Coward. As you're off the right path you turn around...
     </text>
     <actions>
-        <choice name="Turn back" nextscenariofile="assets/scenarios/test.xml">
+        <choice name="Turn back" nexteventfile="assets/AllEvents/test.xml">
             <effect />
         </choice>
     </actions>
-</scenario>
+</event>
