@@ -18,6 +18,6 @@ public class Battle implements IAction {
 
     @Override
     public String getActionName() {
-        return null;
+        return "TempBattle";
     }
 }
