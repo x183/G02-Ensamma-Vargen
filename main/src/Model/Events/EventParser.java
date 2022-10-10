@@ -38,7 +38,7 @@ public class EventParser {
             throw new RuntimeException();
         }
     }
-    protected static Event parse(String eventPath) {
+    public static Event parse(String eventPath) {
         Document doc = parseDoc(eventPath);
 
         Node eventNode = getEventNode(doc);
@@ -48,8 +48,8 @@ public class EventParser {
         for(int i = 0; i < eventChildren.getLength(); i++) {
             Node currentChildNode = eventChildren.item(i);
             switch (currentChildNode.getNodeName()) {
-                case "text" -> eventText = parseTextNode(currentChildNode);
-                case "actions" -> eventActions = parseActionsNode(currentChildNode);
+                case "text":  eventText = parseTextNode(currentChildNode); break;
+                case "actions": eventActions = parseActionsNode(currentChildNode); break;
             }
         }
         return new Event(eventText, eventActions);
@@ -60,7 +60,7 @@ public class EventParser {
         for (int i = 0; i < actionsChildren.getLength(); i++) {
             Node currentNode = actionsChildren.item(i);
             switch (currentNode.getNodeName()) {
-                case "choice" -> {
+                case "choice": {
                     NamedNodeMap attributes = currentNode.getAttributes();
                     String actionText = attributes.getNamedItem("name").getNodeValue();
                     String nextScenarioPath = attributes.getNamedItem("nexteventfile").getNodeValue();
@@ -70,8 +70,9 @@ public class EventParser {
                         // TODO: parse effects
                     }
                     eventActions.add(new Choice(nextScenarioPath, actionText, effects));
+                    break;
                 }
-                case "combat" -> {
+                case "combat": {
                     NamedNodeMap attributes = currentNode.getAttributes();
                     String nextEventPath = attributes.getNamedItem("nexteventfile").getNodeValue();
                     NodeList combatChildren = currentNode.getChildNodes();
@@ -93,6 +94,7 @@ public class EventParser {
                         throw new RuntimeException("Creature not found for combat");
                     }
                     eventActions.add(new Battle());
+                    break;
                 }
             }
         }

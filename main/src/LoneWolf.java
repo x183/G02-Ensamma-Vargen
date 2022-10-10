@@ -1,11 +1,10 @@
-import Model.Model;
-import Model.ModelController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import View.CLI;
 
 import java.util.Objects;
 
@@ -22,9 +21,20 @@ public class LoneWolf extends Application{
        stage.setResizable(false);
        stage.show();
    }
-    public static void main(String[] args) {
+
+   public static void main (String[] args)
+   {
+       try{
+           CLI.main(args);
+       }catch (Exception e){
+
+       }
+
+   }
+   //Outcommented for testing with CLI class
+    /*public static void main(String[] args) {
         /* Model model = new Model();
-        ModelController modelController = new ModelController(); */
+        ModelController modelController = new ModelController();
         launch(args);
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
@@ -32,5 +42,6 @@ public class LoneWolf extends Application{
                 Model.getInstance().shutDown();
             }
         }));
-    }
+    }*/
+
 }

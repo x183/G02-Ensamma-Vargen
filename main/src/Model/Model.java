@@ -15,10 +15,10 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
     private final Player player;
     private Event currentEvent;
 
-    public Model(Player player){
+    public Model(Player player, Event firstEvent){
         this.player = player;
         this.observers = new ArrayList<>();
-
+        this.currentEvent = firstEvent;
     }
 
     public static Model getInstance(){
@@ -53,4 +53,10 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         currentEvent.subscribe(this);
         notifyObservers(currentEvent);
     }
+
+    public Event getCurrentEvent()
+    {
+        return currentEvent;
+    }
+
 }
