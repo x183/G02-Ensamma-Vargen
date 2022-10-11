@@ -1,10 +1,13 @@
+import Model.Entities.Player;
+import Model.Events.Event;
+import Model.Events.EventParser;
+import Model.Model;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import View.CLI;
 
 import java.util.Objects;
 
@@ -22,26 +25,17 @@ public class LoneWolf extends Application{
        stage.show();
    }
 
-   public static void main (String[] args)
-   {
-       try{
-           CLI.main(args);
-       }catch (Exception e){
-
-       }
-
-   }
-   //Outcommented for testing with CLI class
-    /*public static void main(String[] args) {
-        /* Model model = new Model();
-        ModelController modelController = new ModelController();
+    public static void main(String[] args) {
+        //only to instantiate the model. replace with actual player and event when starting a new game/continuing old save
+        Event emptyLaunchEventGUI = EventParser.parse("assets/AllEvents/emptyLaunchEventGUI.xml");
+        Model model = new Model(new Player(1,1,1,"launchInstance"), emptyLaunchEventGUI);
         launch(args);
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
-                Model.getInstance().shutDown();
+                model.shutDown();
             }
         }));
-    }*/
+    }
 
 }

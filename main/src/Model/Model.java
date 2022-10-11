@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Model implements IObserver<IAction>, IObservable<Event> {
-   // private static Model instance = null;
+    //private static Model instance = null;
     private final List<IObserver<Event>> observers;
     private final Player player;
     private Event currentEvent;
@@ -21,14 +21,15 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         this.currentEvent = firstEvent;
     }
 
-    public static Model getInstance(){
-    /*    if (instance == null) {
+   /* public static Model getInstance(){
+        if (instance == null) {
             instance = new Model();
             instance.init();
         }
-        return instance; */
+        return instance;
         return null;
-    }
+    } */
+
     private void init(){
 
     }

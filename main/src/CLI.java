@@ -1,5 +1,3 @@
-package View;
-
 import Model.Entities.Player;
 import Model.Interfaces.IAction;
 import Model.Model;
@@ -15,7 +13,7 @@ import java.util.Scanner;
 public class CLI {
     public static void main (String[] args ) throws IOException
     {
-        System.out.println("Welcome to the Lone Wolf!\nPress any key to begin your adventure");
+        System.out.println("Welcome to the Lone Wolf!\nEnter any symbol into the console to start your adventure!");
 
         //Console cons = System.console();
         Scanner scanner = new Scanner(System.in);
