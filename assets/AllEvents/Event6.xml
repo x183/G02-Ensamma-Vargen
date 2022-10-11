@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        You fall asleep easily.
+        During the night an evil creature emerged from the forest and ate you up.
+        You died, better luck in another life!
+    </text>
+    <actions>
+        <choice name=" Back to main menu" nexteventfile="assets/AllEvents/startEvent.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>
