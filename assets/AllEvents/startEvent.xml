@@ -7,10 +7,16 @@
         Are you even in your village anymore?
     </text>
     <actions>
-        <choice name="Look around even more where you are right now" nexteventfile="assets/AllEvents/test.xml">
+        <choice name=" Look around even more where you are right now" nexteventfile="assets/AllEvents/Event2.xml">
             <effect />
         </choice>
-        <choice name="Lay down and continue sleeping" nexteventfile="assets/AllEvents/test2.xml">
+        <choice name=" Go towards the left path" nexteventfile="assets/AllEvents/Event3.xml">
+            <effect />
+        </choice>
+        <choice name=" Go towards the right path" nexteventfile="assets/AllEvents/Event4.xml">
+            <effect />
+        </choice>
+        <choice name=" Lay down and continue sleeping" nexteventfile="assets/AllEvents/Event6.xml">
             <effect />
         </choice>
     </actions>
