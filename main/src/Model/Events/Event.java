@@ -27,6 +27,13 @@ public class Event extends EventSuper implements IObservable<IAction> {
         return EventParser.parse(eventPath);
     }
 
+    public void selectAction(int i){
+        if(i >= actions.size() | i < 0){
+            throw new RuntimeException("Selected index not in range");
+        }
+        notifyObservers(actions.get(i));
+    }
+
     @Override
     public void notifyObservers(IAction action) {
         for (IObserver<IAction> o : observers) {
@@ -38,4 +45,18 @@ public class Event extends EventSuper implements IObservable<IAction> {
     public void subscribe(IObserver<IAction> observer) {
         observers.add(observer);
     }
+
+    public String getActionText(int i){
+        return actions.get(i).getActionName();
+    }
+    public int getAmountOfActions(){
+        return actions.size();
+    }
+    public String getEventText(){
+        return eventText;
+    }
+    public static Event getGameOverEvent(String message){
+        return new Event(message, new ArrayList<>());
+    }
+
 }

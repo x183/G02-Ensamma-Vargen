@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Model implements IObserver<IAction>, IObservable<Event> {
-   // private static Model instance = null;
+    //private static Model instance = null;
     private final List<IObserver<Event>> observers;
     private final Player player;
     private Event currentEvent;
@@ -19,31 +19,34 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         this.player = player;
         this.observers = new ArrayList<>();
         this.currentEvent = firstEvent;
+        currentEvent.subscribe(this);
     }
 
-    public static Model getInstance(){
-    /*    if (instance == null) {
+   /* public static Model getInstance(){
+        if (instance == null) {
             instance = new Model();
             instance.init();
         }
-        return instance; */
+        return instance;
         return null;
-    }
-    private void init(){
+    } */
 
-    }
+
     public void shutDown(){
 
     }
 
     @Override
     public void subscribe(IObserver<Event> observer) {
-
+        observers.add(observer);
+        notifyObservers(currentEvent);
     }
 
     @Override
     public void notifyObservers(Event event) {
-
+        for (IObserver<Event> o : observers) {
+            o.update(event);
+        }
     }
 
     @Override
@@ -52,6 +55,10 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         currentEvent = action.getNextEvent();
         currentEvent.subscribe(this);
         notifyObservers(currentEvent);
+    }
+
+    public void selectAction(int i){
+        currentEvent.selectAction(i);
     }
 
     public Event getCurrentEvent()
