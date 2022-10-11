@@ -24,7 +24,7 @@ public class CLI {
 
         scanner.nextLine();
 
-        String keyPressed;
+        int keyPressed;
         while (true)
         {
             Event currentEvent = model.getCurrentEvent();
@@ -34,8 +34,9 @@ public class CLI {
             {
                 System.out.println(i + choices.get(i).getActionName());
             }
-            keyPressed = scanner.nextLine();
-            System.out.println(keyPressed);
+            keyPressed = scanner.nextInt();
+            //System.out.println(keyPressed);
+            model.selectAction(keyPressed);
 
         }
 
