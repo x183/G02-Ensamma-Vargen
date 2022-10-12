@@ -1,5 +1,6 @@
 package Model.Events.Actions;
 
+import Model.Entities.CharacterState;
 import Model.Entities.Creature;
 import Model.Entities.Player;
 import Model.Events.Event;
@@ -21,9 +22,9 @@ public class Battle implements IAction {
         double enemyDmgTakenPerRound = Math.max(player.getStrength()-enemy.getArmor(), 0);
         double playerDmgTakenPerRound = Math.max(enemy.getStrength()-player.getArmor(), 0);
 
-        while (player.isAlive()&enemy.isAlive()){
-            player.addToHealth(-playerDmgTakenPerRound);
-            enemy.addToHealth(-enemyDmgTakenPerRound);
+        while (player.isAlive() & enemy.isAlive()){
+            player.removeHealth(playerDmgTakenPerRound);
+            enemy.removeHealth(enemyDmgTakenPerRound);
         }
     }
 

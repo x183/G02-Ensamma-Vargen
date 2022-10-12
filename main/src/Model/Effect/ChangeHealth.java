@@ -16,7 +16,7 @@ public class ChangeHealth implements IEffect
     @Override
     public void apply (ACharacter character)
     {
-        character.addToHealth(healthChangeValue);
+        character.addHealth(healthChangeValue);
     }
 }
 

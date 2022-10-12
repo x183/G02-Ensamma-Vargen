@@ -19,14 +19,18 @@ public class CLI {
         Scanner scanner = new Scanner(System.in);
 
         Event startEvent = EventParser.parse("assets/AllEvents/startEvent.xml");
-
         Model model = new Model(new Player(2, 8, 1, "Vargis"), startEvent);
-
         scanner.nextLine();
-
         int keyPressed;
+        boolean restart = false;
+
         while (true)
         {
+            if(restart){
+                startEvent = EventParser.parse("assets/AllEvents/startEvent.xml");
+                model = new Model(new Player(2, 8, 1, "Vargis"), startEvent);
+                restart = false;
+            }
             Event currentEvent = model.getCurrentEvent();
             System.out.println(currentEvent.getEventText());
             List<IAction> choices = currentEvent.getActions();
@@ -37,7 +41,11 @@ public class CLI {
             keyPressed = scanner.nextInt();
             //System.out.println(keyPressed);
             model.selectAction(keyPressed);
-
+           /* if(!model.player.isAlive()){
+                System.out.println("You have died! Enter any number to restart.");
+                scanner.nextLine();
+                restart = true;
+            } */
         }
 
     }

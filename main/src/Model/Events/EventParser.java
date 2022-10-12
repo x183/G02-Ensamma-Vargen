@@ -69,6 +69,7 @@ public class EventParser {
                     for (int j = 0; j < choiceChildren.getLength(); j++) {
                         // TODO: parse effects
                     }
+
                     eventActions.add(new Choice(nextScenarioPath, actionText, effects));
                     break;
                 }
@@ -79,13 +80,14 @@ public class EventParser {
                     Creature creature = null;
                     for (int j = 0; j < combatChildren.getLength(); j++) {
                         Node currentChild = combatChildren.item(j);
-                        if (currentChild.getNodeName().equals("enemy")) {
+                        if (currentChild.getNodeName().equals("enemy")){
                             NamedNodeMap childAttributes = currentChild.getAttributes();
                             String name = childAttributes.getNamedItem("name").getNodeValue();
                             double str = Double.parseDouble(childAttributes.getNamedItem("str").getNodeValue());
                             double armor = Double.parseDouble(childAttributes.getNamedItem("armor").getNodeValue());
                             double hp = Double.parseDouble(childAttributes.getNamedItem("hp").getNodeValue());
                             boolean isHostile = Boolean.parseBoolean(childAttributes.getNamedItem("isHostile").getNodeValue());
+                           // wrong place- boolean resultsInDeath = Boolean.parseBoolean(childAttributes.getNamedItem("resultsInDeath").getNodeValue());
                            // creature = new Creature(name, isHostile, hp, str, armor);
                             creature = CreatureFactory.createMonster(isHostile, str, hp, armor, name);
                         }
