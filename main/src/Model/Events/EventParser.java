@@ -63,18 +63,20 @@ public class EventParser {
                 case "choice": {
                     NamedNodeMap attributes = currentNode.getAttributes();
                     String actionText = attributes.getNamedItem("name").getNodeValue();
-                    String nextScenarioPath = attributes.getNamedItem("nexteventfile").getNodeValue();
+                    String nextEventPath = attributes.getNamedItem("nexteventfile").getNodeValue();
                     List<IEffect> effects = new ArrayList<>();
                     NodeList choiceChildren = currentNode.getChildNodes();
                     for (int j = 0; j < choiceChildren.getLength(); j++) {
                         // TODO: parse effects
                     }
 
-                    eventActions.add(new Choice(nextScenarioPath, actionText, effects));
+                    eventActions.add(new Choice(nextEventPath, actionText, effects));
                     break;
                 }
                 case "combat": {
                     NamedNodeMap attributes = currentNode.getAttributes();
+                    String actionText = attributes.getNamedItem("name").getNodeValue();
+                    System.out.println(actionText);
                     String nextEventPath = attributes.getNamedItem("nexteventfile").getNodeValue();
                     NodeList combatChildren = currentNode.getChildNodes();
                     Creature creature = null;
@@ -83,9 +85,9 @@ public class EventParser {
                         if (currentChild.getNodeName().equals("enemy")){
                             NamedNodeMap childAttributes = currentChild.getAttributes();
                             String name = childAttributes.getNamedItem("name").getNodeValue();
-                            double str = Double.parseDouble(childAttributes.getNamedItem("str").getNodeValue());
+                            double str = Double.parseDouble(childAttributes.getNamedItem("strength").getNodeValue());
                             double armor = Double.parseDouble(childAttributes.getNamedItem("armor").getNodeValue());
-                            double hp = Double.parseDouble(childAttributes.getNamedItem("hp").getNodeValue());
+                            double hp = Double.parseDouble(childAttributes.getNamedItem("health").getNodeValue());
                             boolean isHostile = Boolean.parseBoolean(childAttributes.getNamedItem("isHostile").getNodeValue());
                            // wrong place- boolean resultsInDeath = Boolean.parseBoolean(childAttributes.getNamedItem("resultsInDeath").getNodeValue());
                            // creature = new Creature(name, isHostile, hp, str, armor);
@@ -95,7 +97,7 @@ public class EventParser {
                     if (creature == null) {
                         throw new RuntimeException("Creature not found for combat");
                     }
-                    eventActions.add(new Battle(nextEventPath, creature));
+                    eventActions.add(new Battle(nextEventPath, actionText, creature));
                     break;
                 }
             }

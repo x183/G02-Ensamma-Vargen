@@ -11,10 +11,13 @@ public class Battle implements IAction {
     private static String pretext = "Fight";
     private final String pathToNextEvent;
     private Creature enemy;
+    private String flavourText;
     private boolean playerWon;
-    public Battle(String pathToNextEvent, Creature enemy){
+
+    public Battle(String pathToNextEvent, String flavourText, Creature enemy){
         this.pathToNextEvent = pathToNextEvent;
         this.enemy = enemy;
+        this.flavourText = flavourText;
         playerWon = false;
     }
 
