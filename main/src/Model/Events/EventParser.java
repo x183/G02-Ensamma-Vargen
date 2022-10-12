@@ -93,7 +93,7 @@ public class EventParser {
                     if (creature == null) {
                         throw new RuntimeException("Creature not found for combat");
                     }
-                    eventActions.add(new Battle());
+                    eventActions.add(new Battle(nextEventPath, creature));
                     break;
                 }
             }

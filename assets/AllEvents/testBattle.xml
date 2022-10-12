@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        Let's fight!
+    </text>
+    <actions>
+        <choice name=" Run away" nexteventfile="assets/AllEvents/Event2.xml">
+            <effect />
+        </choice>
+        <Battle name=" Fight the wolf" nexteventfile="assets/AllEvents/VAL2.xml">
+                <enemy name = "wolf" strenght = "5" armor= "1" health = "10" isHostilw = "true"/>
+            </Battle>
+    </actions>
+</event>
