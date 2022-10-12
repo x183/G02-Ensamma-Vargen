@@ -19,5 +19,8 @@
         <choice name=" Lay down and continue sleeping" nexteventfile="assets/AllEvents/Event6.xml">
             <effect />
         </choice>
+        <choice name=" Test fight" nexteventfile="assets/AllEvents/testBattle.xml">
+            <effect />
+        </choice>
     </actions>
 </event>
