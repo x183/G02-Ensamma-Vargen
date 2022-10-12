@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        You continue walking through the dark forest, you are most certainly lost..
+        You get reminded about the fact that people need food and water to survive, and you have neither..
+        However, that is the least of your problems, and you forget everything about your hunger as you hear a roar from one of the bushes.
+        You don’t even have the time to think about running away before the foe charges towards you.
+        It’s time to fight for your life
+
+    </text>
+    <actions>
+        <choice name=" Press 0 to prepare yourself for the charging enemy!" nexteventfile="assets/AllEvents/Event9.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>
