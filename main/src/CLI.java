@@ -39,13 +39,13 @@ public class CLI {
                 System.out.println(i + choices.get(i).getActionName());
             }
             keyPressed = scanner.nextInt();
-            //System.out.println(keyPressed);
-            model.selectAction(keyPressed);
-           /* if(!model.player.isAlive()){
-                System.out.println("You have died! Enter any number to restart.");
-                scanner.nextLine();
+            if(model.getActionName(keyPressed).equals(" Restart")){
                 restart = true;
-            } */
+            } else if(model.getActionName(keyPressed).equals(" Quit Game")) {
+                System.out.println("Thank you for playing the Lone Wolf!");
+                break;
+            } else
+                model.selectAction(keyPressed);
         }
 
     }

@@ -24,9 +24,6 @@ public class Event extends EventSuper implements IObservable<IAction> {
         this.actions = actions;
     }
     public static Event getEvent(String eventPath){
-        if(eventPath.equals("assets/AllEvents/deathEvent.xml")){
-
-        }
         return EventParser.parse(eventPath);
     }
 

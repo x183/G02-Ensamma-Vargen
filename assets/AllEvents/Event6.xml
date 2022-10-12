@@ -6,7 +6,7 @@
         You died, better luck in another life!
     </text>
     <actions>
-        <choice name=" Continue" nexteventfile="assets/AllEvents/deathEvent.xml">
+        <choice name=" Okay" nexteventfile="assets/AllEvents/deathEvent.xml">
             <effect />
         </choice>
     </actions>

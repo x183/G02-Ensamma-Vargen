@@ -42,12 +42,12 @@ public class Battle implements IAction {
     @Override
     public Event getNextEvent()
     {
-        if (playerWon){
+        if(enemy.getName().equals(" reaper")|playerWon){
             return Event.getEvent(pathToNextEvent);
-        }else {
-            return Event.getEvent(pathToNextEvent);
-            //return Event.getGameOverEvent("Game over!" + enemy.getName()+ "killed you" );
+        } else {
+            return Event.getEvent("assets/AllEvents/deathEvent.xml");
         }
+
     }
 
     @Override
