@@ -76,7 +76,6 @@ public class EventParser {
                 case "combat": {
                     NamedNodeMap attributes = currentNode.getAttributes();
                     String actionText = attributes.getNamedItem("name").getNodeValue();
-                    System.out.println(actionText);
                     String nextEventPath = attributes.getNamedItem("nexteventfile").getNodeValue();
                     NodeList combatChildren = currentNode.getChildNodes();
                     Creature creature = null;

@@ -8,7 +8,7 @@ import Model.Interfaces.IAction;
 
 //An event that occurs when the player is battling a creature
 public class Battle implements IAction {
-    private static String pretext = "Fight";
+    private static String pretext = " Fight";
     private final String pathToNextEvent;
     private Creature enemy;
     private String flavourText;
@@ -45,13 +45,14 @@ public class Battle implements IAction {
         if (playerWon){
             return Event.getEvent(pathToNextEvent);
         }else {
-            return Event.getGameOverEvent("Game over!" + enemy.getName()+ "killed you" );
+            return Event.getEvent(pathToNextEvent);
+            //return Event.getGameOverEvent("Game over!" + enemy.getName()+ "killed you" );
         }
     }
 
     @Override
     public String getActionName()
     {
-        return pretext + enemy.getName();
+        return flavourText;
     }
 }
