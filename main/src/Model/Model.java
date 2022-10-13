@@ -23,6 +23,12 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         currentEvent.subscribe(this);
     }
 
+    public double getPlayerStrength(){
+        return player.getStrength();
+    }
+    public double getPlayerArmour(){
+        return player.getArmor();
+    }
 
    /* public static Model getInstance(){
         if (instance == null) {
