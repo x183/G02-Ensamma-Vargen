@@ -9,9 +9,9 @@ import java.util.List;
 
 //An event that occurs when the player has to make a choice to move to the next event
 public class Choice implements IAction {
-    private String pathToNextEvent;
-    private String flavourText;
-    private List<IEffect> effects;
+    private final String pathToNextEvent;
+    private final String flavourText;
+    private final List<IEffect> effects;
 
     public Choice(String pathToNextScenario, String flavourText, List<IEffect> effects) {
         this.pathToNextEvent = pathToNextScenario;

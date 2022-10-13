@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<event>
+<event img="assets/images/img01.png">
     <text>
         TEXT
     </text>
     <actions>
         <choice name=" VAL1" nexteventfile="assets/AllEvents/VAL1.xml">
-            <effect />
+            <effect name="changehealth" text="A tree falls on you" value="-5"/>
+            <effect name="" condition="str>5" logic="or">
+                <condition expression="class=hunter" />
+                <condition expression="hp<=5" />
+            </effect>
         </choice>
         <choice name=" VAL2" nexteventfile="assets/AllEvents/VAL2.xml">
             <effect />
