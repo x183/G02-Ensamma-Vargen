@@ -1,6 +1,9 @@
 package Model.Interfaces;
 
-public interface ICharacter {
+import Model.Entities.CharacterState;
 
+public interface ICharacter {
+        CharacterState getState();
+        boolean isAlive();
 
 }

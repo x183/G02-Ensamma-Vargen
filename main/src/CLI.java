@@ -19,14 +19,18 @@ public class CLI {
         Scanner scanner = new Scanner(System.in);
 
         Event startEvent = EventParser.parse("assets/AllEvents/startEvent.xml");
-
         Model model = new Model(new Player(2, 8, 1, "Vargis"), startEvent);
-
         scanner.nextLine();
-
         int keyPressed;
+        boolean restart = false;
+
         while (true)
         {
+            if(restart){
+                startEvent = EventParser.parse("assets/AllEvents/startEvent.xml");
+                model = new Model(new Player(2, 8, 1, "Vargis"), startEvent);
+                restart = false;
+            }
             Event currentEvent = model.getCurrentEvent();
             System.out.println(currentEvent.getEventText());
             List<IAction> choices = currentEvent.getActions();
@@ -35,9 +39,13 @@ public class CLI {
                 System.out.println(i + choices.get(i).getActionName());
             }
             keyPressed = scanner.nextInt();
-            //System.out.println(keyPressed);
-            model.selectAction(keyPressed);
-
+            if(model.getActionName(keyPressed).equals(" Restart")){
+                restart = true;
+            } else if(model.getActionName(keyPressed).equals(" Quit Game")) {
+                System.out.println("Thank you for playing the Lone Wolf!");
+                break;
+            } else
+                model.selectAction(keyPressed);
         }
 
     }

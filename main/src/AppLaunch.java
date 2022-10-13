@@ -17,6 +17,7 @@ public class AppLaunch {
                     break;
                 } catch (Exception e) {
                     System.out.println("Exception at launch. Program stopping.");
+                    e.printStackTrace();
                     break;
                 }
             } else {

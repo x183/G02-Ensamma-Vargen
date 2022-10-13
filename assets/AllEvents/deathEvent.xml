@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        Your player character has died. Do you want to restart or quit?
+    </text>
+    <actions>
+        <choice name=" Restart" nexteventfile="assets/AllEvents/VAL1.xml">
+            <effect />
+        </choice>
+        <choice name=" Quit Game" nexteventfile="assets/AllEvents/VAL1.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

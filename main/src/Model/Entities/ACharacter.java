@@ -10,6 +10,7 @@ public class ACharacter implements ICharacter {
         double maxHealth;
         double currentHealth;
         double Armor;
+        CharacterState state;
 
         public ACharacter(double Strength, double Health, String Name, double Armor)
         {
@@ -18,18 +19,32 @@ public class ACharacter implements ICharacter {
                 this.currentHealth = Health;
                 this.Name = Name;
                 this.Armor = Armor;
+                this.state = CharacterState.ALIVE;
 
 
         }
-        public void addToHealth(double value)
+        public void addHealth(double value)
         {
-                currentHealth += value;
-                currentHealth = Math.min(Math.max(currentHealth, 0), maxHealth);
+                if(value>0) {
+                        currentHealth += Math.min(value, maxHealth);
+                }
         }
+        public void removeHealth(double value){
+                if(value>0) {
+                        currentHealth -= value;
+                }
+                if(currentHealth<=0){
+                        this.state = CharacterState.DEAD;
+                }
+        }
+
         //Boolean for if a character is alive or not
-        public boolean isAlive()
-        {
-                return currentHealth > 0;
+
+        public CharacterState getState(){
+                return state;
+        }
+        public boolean isAlive(){
+                return state==CharacterState.ALIVE;
         }
 
         //Getters for all attributes for characters

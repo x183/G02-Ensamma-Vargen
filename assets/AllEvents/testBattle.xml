@@ -8,7 +8,7 @@
             <effect />
         </choice>
         <Battle name=" Fight the wolf" nexteventfile="assets/AllEvents/VAL2.xml">
-                <enemy name = "wolf" strenght = "5" armor= "1" health = "10" isHostilw = "true"/>
+                <enemy name = "wolf" strenght = "5" armor= "1" health = "10" isHostile = "true"/>
             </Battle>
     </actions>
 </event>

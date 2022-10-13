@@ -1,5 +1,6 @@
 package Model;
 
+import Model.Entities.CharacterState;
 import Model.Entities.Player;
 import Model.Events.Event;
 import Model.Interfaces.IAction;
@@ -21,6 +22,7 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         this.currentEvent = firstEvent;
         currentEvent.subscribe(this);
     }
+
 
    /* public static Model getInstance(){
         if (instance == null) {
@@ -60,6 +62,7 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
     public void selectAction(int i){
         currentEvent.selectAction(i);
     }
+    public String getActionName(int i){return currentEvent.getActionText(i);}
 
     public Event getCurrentEvent()
     {

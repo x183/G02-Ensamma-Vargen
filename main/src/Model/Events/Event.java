@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //The forrest represent all the events that can happen.
-//The forrest has graph containing all events and how they relate to echother
+//The forrest has graph containing all events and how they relate to eachother
 public class Event extends EventSuper implements IObservable<IAction> {
     private final List<IObserver<IAction>> observers;
 
