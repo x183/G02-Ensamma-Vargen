@@ -42,6 +42,7 @@ public class EventParser {
         Document doc = parseDoc(eventPath);
 
         Node eventNode = getEventNode(doc);
+        //eventNode.getAttributes().getNamedItem("img").getNodeValue();
         NodeList eventChildren = eventNode.getChildNodes();
         String eventText = "Text wasn't initialized";
         List<IAction> eventActions = new ArrayList<>();
@@ -73,7 +74,7 @@ public class EventParser {
                     eventActions.add(new Choice(nextEventPath, actionText, effects));
                     break;
                 }
-                case "combat": {
+                case "battle": {
                     NamedNodeMap attributes = currentNode.getAttributes();
                     String actionText = attributes.getNamedItem("name").getNodeValue();
                     String nextEventPath = attributes.getNamedItem("nexteventfile").getNodeValue();
@@ -84,13 +85,13 @@ public class EventParser {
                         if (currentChild.getNodeName().equals("enemy")){
                             NamedNodeMap childAttributes = currentChild.getAttributes();
                             String name = childAttributes.getNamedItem("name").getNodeValue();
-                            double str = Double.parseDouble(childAttributes.getNamedItem("strength").getNodeValue());
+                            double strength = Double.parseDouble(childAttributes.getNamedItem("strength").getNodeValue());
                             double armor = Double.parseDouble(childAttributes.getNamedItem("armor").getNodeValue());
-                            double hp = Double.parseDouble(childAttributes.getNamedItem("health").getNodeValue());
+                            double health = Double.parseDouble(childAttributes.getNamedItem("health").getNodeValue());
                             boolean isHostile = Boolean.parseBoolean(childAttributes.getNamedItem("isHostile").getNodeValue());
                            // wrong place- boolean resultsInDeath = Boolean.parseBoolean(childAttributes.getNamedItem("resultsInDeath").getNodeValue());
                            // creature = new Creature(name, isHostile, hp, str, armor);
-                            creature = CreatureFactory.createMonster(isHostile, str, hp, armor, name);
+                            creature = CreatureFactory.createMonster(isHostile, strength, health, armor, name);
                         }
                     }
                     if (creature == null) {
