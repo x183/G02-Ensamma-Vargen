@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        You find nothing :(
+        Filthy orcsies
+
+    </text>
+    <actions>
+        <choice name=" Continue your adventure" nexteventfile="assets/AllEvents/Event17.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

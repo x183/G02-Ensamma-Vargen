@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        You walk down the cobblestone path, you start to get tired and your feet hurt.
+        Just as you are about to take a short rest after walking up the biggest hill you have ever seen,
+        you see a village with a huge mountain behind it.
+
+        What would you like to do?
+
+    </text>
+    <actions>
+        <choice name=" Continue walking towards the village" nexteventfile="assets/AllEvents/Event17.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

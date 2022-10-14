@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        This is the end of the game as of now!
+        Thank you for playing *insert heart*
+    </text>
+    <actions>
+        <choice name=" Back to main menu" nexteventfile="assets/AllEvents/VAL1.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

@@ -10,10 +10,10 @@
         What would you like to do?
     </text>
     <actions>
-        <choice name=" Continue walking deeper in the forest where you -think- you were heading" nexteventfile="assets/AllEvents/Event8.xml">
+        <choice name=" Continue walking deeper in the forest where you -think- you were heading" nexteventfile="assets/AllEvents/Event7.xml">
             <effect />
         </choice>
-        <choice name=" Turn back and try to find the path again" nexteventfile="assets/AllEvents/Event7.xml">
+        <choice name=" Turn back and try to find the path again" nexteventfile="assets/AllEvents/Event8.xml">
             <effect />
         </choice>
     </actions>
