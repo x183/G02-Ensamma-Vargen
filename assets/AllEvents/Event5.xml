@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <event>
     <text>
-        TEXT
+        You walk closer to the bush, it sounds like a small creature moving around.
+        You walk even closer and peek through the twigs. A rabbit is looking up at you.
+        Your empty stomach is reminding you that you can’t remember when you last ate something.
+        You realize that if you want to kill the small creature, you better act quickly!
+
+        What would you like to do?
+
     </text>
     <actions>
-        <choice name=" VAL1" nexteventfile="assets/AllEvents/VAL1.xml">
+        <choice name=" Try to kill the rabbit" nexteventfile="assets/AllEvents/Event11.xml">
             <effect />
         </choice>
-        <choice name=" VAL2" nexteventfile="assets/AllEvents/VAL2.xml">
-            <effect />
-        </choice>
-        <choice name=" VAL3" nexteventfile="assets/AllEvents/VAL3.xml">
-            <effect />
-        </choice>
-        <choice name=" VAL4" nexteventfile="assets/AllEvents/VAL4.xml">
+        <choice name=" Leave it alone and go back to the open forest space" nexteventfile="assets/AllEvents/Event12.xml">
             <effect />
         </choice>
     </actions>

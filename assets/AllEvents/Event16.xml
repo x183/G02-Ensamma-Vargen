@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        You found some meat, and put it in your pocket!
+        Tonight you will dine as a king!
+    </text>
+    <actions>
+        <choice name=" Continue your adventure" nexteventfile="assets/AllEvents/Event12.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>
