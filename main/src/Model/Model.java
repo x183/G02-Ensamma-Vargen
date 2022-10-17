@@ -16,6 +16,8 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
     private final Player player;
     private Event currentEvent;
 
+    public static Model gameModel;
+
     public Model(Player player, Event firstEvent){
         this.player = player;
         this.observers = new ArrayList<>();

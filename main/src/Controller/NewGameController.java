@@ -94,6 +94,7 @@ public class NewGameController implements Initializable {
         }
         System.out.println(gameModel.getPlayerStrength());
         System.out.println(gameModel.getPlayerArmour());
+        Model.gameModel = gameModel;
         startGameView(gameModel);
     }
     public void startGameView(Model gameModel) throws Exception{

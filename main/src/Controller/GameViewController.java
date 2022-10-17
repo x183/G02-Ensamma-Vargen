@@ -62,9 +62,7 @@ public class GameViewController implements IObserver<Event>, Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //Model.getInstance().subscribe(this);
-
-        gameModel = parentController.getGameModel();
-        gameModel.subscribe(this);
+        Model.gameModel.subscribe(this);
     }
 
     public void pressedExitButton() throws Exception{
@@ -74,15 +72,15 @@ public class GameViewController implements IObserver<Event>, Initializable {
     }
 
     public void pressedChoiceButton1() {
-       // Model.getInstance().selectAction(0);
+        Model.gameModel.selectAction(0);
     }
     public void pressedChoiceButton2() {
-       // Model.getInstance().selectAction(1);
+        Model.gameModel.selectAction(1);
     }
     public void pressedChoiceButton3() {
-      //  Model.getInstance().selectAction(2);
+        Model.gameModel.selectAction(2);
     }
     public void pressedChoiceButton4() {
-       // Model.getInstance().selectAction(3);
+        Model.gameModel.selectAction(3);
     }
 }
