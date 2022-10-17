@@ -10,7 +10,7 @@
 
     </text>
     <actions>
-        <choice name=" Try to kill the rabbit" nexteventfile="assets/AllEvents/Event11.xml">
+        <choice name=" Try to kill the rabbit" nexteventfile="assets/AllEvents/testBattle.xml">
             <effect />
         </choice>
         <choice name=" Leave it alone and go back to the open forest space" nexteventfile="assets/AllEvents/Event12.xml">
