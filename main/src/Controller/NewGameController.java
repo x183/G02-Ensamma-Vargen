@@ -68,9 +68,12 @@ public class NewGameController implements Initializable {
     void setName(String name){
         this.selectedNameString = name;
     }
+    Model getGameModel(){
+        return gameModel;
+    }
 
     @FXML
-    private void continueButton(){
+    private void continueButton() throws Exception {
         if(selectedNameString.equals("") && selectedClassString.equals("")){
             setContinueWarning("You need to choose a name and pick a class!");
 
@@ -91,6 +94,12 @@ public class NewGameController implements Initializable {
         }
         System.out.println(gameModel.getPlayerStrength());
         System.out.println(gameModel.getPlayerArmour());
+        startGameView(gameModel);
+    }
+    public void startGameView(Model gameModel) throws Exception{
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/GameView.fxml")));
+        Stage aboutStage = (Stage) ExitButton.getScene().getWindow();
+        aboutStage.setScene(new Scene(root));
     }
 
     private void setContinueWarning(String warning){

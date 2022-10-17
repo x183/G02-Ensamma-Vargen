@@ -5,6 +5,7 @@ import Model.Interfaces.util.IObserver;
 import Model.Model;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,10 +13,14 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+import java.net.URL;
 import java.util.List;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class GameViewController implements IObserver<Event> {
+public class GameViewController implements IObserver<Event>, Initializable {
+    Model gameModel;
+    NewGameController parentController;
     @Override
     public void update(Event event) {
         textBox.setText(event.getEventText());
@@ -54,8 +59,12 @@ public class GameViewController implements IObserver<Event> {
     @FXML
     private Button ChoiceButton1, ChoiceButton2, ChoiceButton3, ChoiceButton4, ExitButton;
 
-    public void initialize() {
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
         //Model.getInstance().subscribe(this);
+
+        gameModel = parentController.getGameModel();
+        gameModel.subscribe(this);
     }
 
     public void pressedExitButton() throws Exception{
