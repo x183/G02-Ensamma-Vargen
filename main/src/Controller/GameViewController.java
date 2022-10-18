@@ -102,9 +102,11 @@ public class GameViewController implements IObserver<Event>, Initializable {
         aboutStage.setScene(new Scene(root));
     }
 
-    public void pressedChoiceButton1() {
+    public void pressedChoiceButton1() throws Exception {
         if(Model.getInstance().getActionName(0).equals(" Restart")){
             Model.getInstance().resetPlayer();
+        } else if(Model.getInstance().getActionName(0).equals(" Back to main menu")){
+            pressedExitButton();
         }
         Model.getInstance().selectAction(0);
     }

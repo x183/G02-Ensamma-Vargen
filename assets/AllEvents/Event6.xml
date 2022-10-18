@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<event>
+<event background="assets/images/creature.png">
     <text>
         You fall asleep easily.
         During the night an evil creature emerged from the forest and ate you up.
