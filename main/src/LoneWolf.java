@@ -1,7 +1,5 @@
-import Model.Entities.Player;
 import Model.Events.Event;
 import Model.Events.EventParser;
-import Model.Model;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,7 +17,7 @@ public class LoneWolf extends Application{
        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("View/MainMenu.fxml")));
        Scene scene = new Scene(root);
        stage.setTitle("Lone Wolf");
-       Image icon = new Image("View/images/lonewolflogo.png");
+       Image icon = new Image(System.getProperty("user.dir")+"/assets/images/lonewolflogo.png");
        stage.getIcons().add(icon);
        stage.setScene(scene);
        stage.setResizable(false);

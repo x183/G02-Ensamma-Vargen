@@ -49,13 +49,13 @@ public class EventParser {
         for(int i = 0; i < eventChildren.getLength(); i++) {
             Node currentChildNode = eventChildren.item(i);
             switch (currentChildNode.getNodeName()) {
-                case "text":  eventText = parseTextNode(currentChildNode); break;
-                case "actions": eventActions = parseActionsNode(currentChildNode); break;
+                case "text":  eventText = parseTextNode(currentChildNode, eventPath); break;
+                case "actions": eventActions = parseActionsNode(currentChildNode, eventPath); break;
             }
         }
-        return new Event(eventText, eventActions);
+        return new Event(eventPath, eventText, eventActions);
     }
-    private static List<IAction> parseActionsNode(Node actionsNode) {
+    private static List<IAction> parseActionsNode(Node actionsNode, String eventPath) {
         List<IAction> eventActions = new ArrayList<>();
         NodeList actionsChildren = actionsNode.getChildNodes();
         for (int i = 0; i < actionsChildren.getLength(); i++) {
@@ -71,7 +71,7 @@ public class EventParser {
                         // TODO: parse effects
                     }
 
-                    eventActions.add(new Choice(nextEventPath, actionText, effects));
+                    eventActions.add(new Choice(eventPath, nextEventPath, actionText, effects));
                     break;
                 }
                 case "battle": {
@@ -97,13 +97,13 @@ public class EventParser {
                     if (creature == null) {
                         throw new RuntimeException("Creature not found for combat");
                     }
-                    eventActions.add(new Battle(nextEventPath, actionText, creature));
+                    eventActions.add(new Battle(eventPath, nextEventPath, actionText, creature));
                     break;
                 }
             }
         }
         return eventActions;
     }
-    private static String parseTextNode(Node textNode){return textNode.getTextContent();}
+    private static String parseTextNode(Node textNode, String eventPath){return textNode.getTextContent();}
     private static Node getEventNode(Document doc){return doc.getElementsByTagName("event").item(0);}
 }
