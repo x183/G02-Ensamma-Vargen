@@ -13,13 +13,15 @@ import java.util.List;
 public class Model implements IObserver<IAction>, IObservable<Event> {
     //private static Model instance = null;
     private final List<IObserver<Event>> observers;
-    private final Player player;
+    private Player player;
+    private final Player playerBackup;
     private Event currentEvent;
 
     public static Model gameModel;
 
     public Model(Player player, Event firstEvent){
         this.player = player;
+        this.playerBackup = player;
         this.observers = new ArrayList<>();
         this.currentEvent = firstEvent;
         currentEvent.subscribe(this);
@@ -30,6 +32,9 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
     }
     public double getPlayerArmour(){
         return player.getArmor();
+    }
+    public void resetPlayer(){
+        this.player = playerBackup;
     }
 
    /* public static Model getInstance(){
