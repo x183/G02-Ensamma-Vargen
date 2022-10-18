@@ -32,17 +32,17 @@
                   <Font name="Perpetua" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="286.0" layoutY="198.0" mnemonicParsing="false" text="Continue" textAlignment="CENTER">
+            <Button layoutX="286.0" layoutY="198.0" mnemonicParsing="false" opacity="0.35" text="Continue" textAlignment="CENTER">
                <font>
                   <Font name="Perpetua" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="281.0" layoutY="277.0" mnemonicParsing="false" text="Load Game">
+            <Button layoutX="281.0" layoutY="277.0" mnemonicParsing="false" opacity="0.35" text="Load Game">
                <font>
                   <Font name="Perpetua" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="288.0" layoutY="315.0" mnemonicParsing="false" text="Options">
+            <Button layoutX="288.0" layoutY="315.0" mnemonicParsing="false" opacity="0.35" text="Options">
                <font>
                   <Font name="Perpetua" size="14.0" />
                </font>
