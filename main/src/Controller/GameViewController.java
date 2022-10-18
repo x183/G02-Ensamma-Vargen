@@ -36,7 +36,7 @@ public class GameViewController implements IObserver<Event>, Initializable {
     @Override
     public void update(Event event) {
         updateEventText(event);
-        Background background = BackgroundParser.ParseBackground(gameModel.getCurrentEvent().getPathToThisEvent());
+        Background background = BackgroundParser.ParseBackground(Model.getInstance().getCurrentEvent().getPathToThisEvent());
         mainPane.setBackground(background);
 
         if (event.getAmountOfActions() >= 1) {
@@ -91,7 +91,7 @@ public class GameViewController implements IObserver<Event>, Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         //Model.getInstance().subscribe(this);
         Model.getInstance().subscribe(this);
-        Background background = BackgroundParser.ParseBackground(gameModel.getCurrentEvent().getPathToThisEvent());
+        Background background = BackgroundParser.ParseBackground(Model.getInstance().getCurrentEvent().getPathToThisEvent());
         mainPane.setBackground(background);
 
     }

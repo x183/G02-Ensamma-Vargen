@@ -14,7 +14,7 @@
          <children>
             <ImageView fx:id="mainmenuBG" fitHeight="512.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/mainmenubg.png" />
+                  <Image url="@../../../assets/images/mainmenubg.png" />
                </image>
             </ImageView>
             <Text fill="WHITE" fontSmoothingType="LCD" layoutX="137.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Lone Wolf" textAlignment="CENTER">
