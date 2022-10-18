@@ -11,14 +11,15 @@ import java.util.List;
 //The forrest has graph containing all events and how they relate to eachother
 public class Event extends EventSuper implements IObservable<IAction> {
     private final List<IObserver<IAction>> observers;
-
+    private final String pathToThisEvent;
     public List<IAction> getActions() {
         return actions;
     }
 
     private final List<IAction> actions;
 
-    protected Event(String eventText, List<IAction> actions){
+    protected Event(String thisEventPath, String eventText, List<IAction> actions) {
+        pathToThisEvent = thisEventPath;
         observers = new ArrayList<>();
         this.eventText = eventText;
         this.actions = actions;
@@ -55,8 +56,11 @@ public class Event extends EventSuper implements IObservable<IAction> {
     public String getEventText(){
         return eventText;
     }
-    public static Event getGameOverEvent(String message){
-        return new Event(message, new ArrayList<>());
+    public static Event getGameOverEvent(String message) {
+        return new Event("assets/AllEvents/deathEvent.xml", message, new ArrayList<>());
     }
 
+    public String getPathToThisEvent() {
+        return pathToThisEvent;
+    }
 }

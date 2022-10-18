@@ -3,6 +3,7 @@ package Controller;
 import Model.Events.Event;
 import Model.Interfaces.util.IObserver;
 import Model.Model;
+import View.BackgroundParser;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -20,11 +25,15 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class GameViewController implements IObserver<Event>, Initializable {
-    Model gameModel;
-    NewGameController parentController;
+    private Model gameModel;
+    private NewGameController parentController;
+    @FXML
+    private Pane mainPane;
     @Override
     public void update(Event event) {
         textBox.setText(event.getEventText());
+        Background background = BackgroundParser.ParseBackground(gameModel.getCurrentEvent().getPathToThisEvent());
+        mainPane.setBackground(background);
         if (event.getAmountOfActions() >= 1) {
             ChoiceButton1.setVisible(true);
             ChoiceButton1.setText(event.getActionText(0));
@@ -63,7 +72,10 @@ public class GameViewController implements IObserver<Event>, Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //Model.getInstance().subscribe(this);
+        gameModel = Model.gameModel;
         Model.gameModel.subscribe(this);
+        Background background = BackgroundParser.ParseBackground(gameModel.getCurrentEvent().getPathToThisEvent());
+        mainPane.setBackground(background);
     }
 
     public void pressedExitButton() throws Exception{

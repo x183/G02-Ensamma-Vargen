@@ -9,11 +9,13 @@ import java.util.List;
 
 //An event that occurs when the player has to make a choice to move to the next event
 public class Choice implements IAction {
+    private final String pathToThisEvent;
     private final String pathToNextEvent;
     private final String flavourText;
     private final List<IEffect> effects;
 
-    public Choice(String pathToNextScenario, String flavourText, List<IEffect> effects) {
+    public Choice(String pathToThisEvent, String pathToNextScenario, String flavourText, List<IEffect> effects) {
+        this.pathToThisEvent = pathToThisEvent;
         this.pathToNextEvent = pathToNextScenario;
         this.flavourText = flavourText;
         this.effects = effects;
@@ -34,5 +36,10 @@ public class Choice implements IAction {
     @Override
     public String getActionName() {
         return flavourText;
+    }
+
+    @Override
+    public String getPathToThisEvent() {
+        return pathToThisEvent;
     }
 }

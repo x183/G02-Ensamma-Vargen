@@ -9,8 +9,8 @@ import java.util.List;
 //An event where a choice you have made killed you, or you lost a battle
 public class DeathEvent extends Event {
 
-    protected DeathEvent(String eventText, List<IAction> actions) {
-        super(eventText, actions);
+    protected DeathEvent(String pathToThisEvent, String eventText, List<IAction> actions) {
+        super(pathToThisEvent, eventText, actions);
 
     }
 }

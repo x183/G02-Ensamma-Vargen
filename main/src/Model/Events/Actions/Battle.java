@@ -8,13 +8,15 @@ import Model.Interfaces.IAction;
 
 //An event that occurs when the player is battling a creature
 public class Battle implements IAction {
+    private final String pathToThisEvent;
     private static String pretext = " Fight";
     private final String pathToNextEvent;
     private Creature enemy;
     private String flavourText;
     private boolean playerWon;
 
-    public Battle(String pathToNextEvent, String flavourText, Creature enemy){
+    public Battle(String pathToThisEvent, String pathToNextEvent, String flavourText, Creature enemy){
+        this.pathToThisEvent = pathToThisEvent;
         this.pathToNextEvent = pathToNextEvent;
         this.enemy = enemy;
         this.flavourText = flavourText;
@@ -54,5 +56,10 @@ public class Battle implements IAction {
     public String getActionName()
     {
         return flavourText;
+    }
+
+    @Override
+    public String getPathToThisEvent() {
+        return pathToThisEvent;
     }
 }

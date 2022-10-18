@@ -7,4 +7,5 @@ public interface IAction {
     void performAction(Player player);
     Event getNextEvent();
     String getActionName();
+    String getPathToThisEvent();
 }
