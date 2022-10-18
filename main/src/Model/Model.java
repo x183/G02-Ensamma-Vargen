@@ -27,6 +27,9 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         currentEvent.subscribe(this);
     }
 
+    public static void setGameModel(Model gameModel) {
+        Model.gameModel = gameModel;
+    }
     public double getPlayerStrength(){
         return player.getStrength();
     }
@@ -37,14 +40,13 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         this.player = playerBackup;
     }
 
-   /* public static Model getInstance(){
-        if (instance == null) {
-            instance = new Model();
-            instance.init();
+    public static Model getInstance(){
+        if (gameModel == null) {
+            System.out.println("Model not found, quitting");
+            System.exit(1);
         }
-        return instance;
-        return null;
-    } */
+        return gameModel;
+    }
 
 
     public void shutDown(){

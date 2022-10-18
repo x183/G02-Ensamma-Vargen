@@ -94,8 +94,8 @@ public class NewGameController implements Initializable {
         }
         System.out.println(gameModel.getPlayerStrength());
         System.out.println(gameModel.getPlayerArmour());
-        Model.gameModel = gameModel;
-        startGameView(gameModel);
+        Model.setGameModel(gameModel);
+        startGameView(Model.getInstance());
     }
     public void startGameView(Model gameModel) throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/GameView.fxml")));
