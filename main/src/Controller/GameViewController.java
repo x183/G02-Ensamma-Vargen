@@ -3,6 +3,7 @@ package Controller;
 import Model.Events.Event;
 import Model.Interfaces.util.IObserver;
 import Model.Model;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -71,10 +72,16 @@ public class GameViewController implements IObserver<Event>, Initializable {
         aboutStage.setScene(new Scene(root));
     }
 
-    public void pressedChoiceButton1() {
+    public void pressedChoiceButton1() throws Exception {
+        if(Model.gameModel.getActionName(0).equals(" Restart")){
+            Model.gameModel.resetPlayer();
+        }
         Model.gameModel.selectAction(0);
     }
-    public void pressedChoiceButton2() {
+    public void pressedChoiceButton2() throws Exception {
+        if(Model.gameModel.getActionName(1).equals(" Quit Game")){
+            pressedExitButton();
+        } else
         Model.gameModel.selectAction(1);
     }
     public void pressedChoiceButton3() {
@@ -83,4 +90,5 @@ public class GameViewController implements IObserver<Event>, Initializable {
     public void pressedChoiceButton4() {
         Model.gameModel.selectAction(3);
     }
+
 }
