@@ -4,10 +4,10 @@
         Your player character has died. Do you want to restart or quit?
     </text>
     <actions>
-        <choice name=" Restart" >
+        <choice name=" Restart" nexteventfile="assets/AllEvents/startEvent.xml">
             <effect />
         </choice>
-        <choice name=" Quit Game" >
+        <choice name=" Quit Game" nexteventfile="">
             <effect />
         </choice>
     </actions>
