@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="512.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/aboutpagebg.png" />
+                  <Image url="@../../../assets/images/aboutpagebg.png" />
                </image>
             </ImageView>
             <Text fill="WHITE" layoutX="83.0" layoutY="44.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="This videogame was inspired by the book series Lone Wolf created by Joe Dever. It was created as part of a university course focusing on Object Oriented Programming. The game is not intended for distribution." textAlignment="CENTER" wrappingWidth="472.8038635253906">

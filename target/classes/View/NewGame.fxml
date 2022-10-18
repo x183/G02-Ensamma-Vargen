@@ -36,7 +36,7 @@
       </StackPane>
       <ImageView fitHeight="512.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/newgamebg.png" />
+            <Image url="@../../../assets/images/newgamebg.png" />
          </image>
       </ImageView>
       <StackPane fx:id="createClassMain" prefHeight="150.0" prefWidth="200.0">
