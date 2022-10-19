@@ -11,13 +11,22 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
+/**
+ * Controller for the about page screen
+ */
 public class AboutPageController extends AnchorPane {
 
+        /**
+         * all the FXML components of the stage
+         */
         @FXML
         private StackPane aboutpageAnchorPane;
         @FXML
         private Button aboutPageBackButton;
 
+        /**
+         * method to load the main menu page, called when the back button is pressed
+         */
         public void pressedAboutPageBackButton() throws Exception{
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/MainMenu.fxml")));
                 Stage aboutStage = (Stage) aboutPageBackButton.getScene().getWindow();
