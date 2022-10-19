@@ -62,6 +62,9 @@ public class NewGameController implements Initializable {
      */
     @FXML
     void selectClass() {
+        if(classComboBox.getSelectionModel().getSelectedItem() == null) {
+            return;
+        }
         this.selectedClassString = classComboBox.getSelectionModel().getSelectedItem();
         if(selectedClassString.equals("Create your own")){
             createYourOwnClass.toFront();
