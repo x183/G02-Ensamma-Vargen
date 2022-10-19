@@ -19,7 +19,14 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Parses the event XML file and returns an Event object.
+ */
 public class EventParser {
+    /**
+     * Document parseDoc(String path)
+     * parses xml file and returns a Document object
+     */
     private static Document parseDoc(String path) {
         try {
             DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
@@ -38,6 +45,10 @@ public class EventParser {
             throw new RuntimeException();
         }
     }
+
+    /**
+     * Parses the event node
+     */
     public static Event parse(String eventPath) {
         Document doc = parseDoc(eventPath);
 
@@ -55,6 +66,13 @@ public class EventParser {
         }
         return new Event(eventPath, eventText, eventActions);
     }
+
+    /**
+     * parses the actions node, the choices possible in the event and what they lead to
+     * @param actionsNode the actions
+     * @param eventPath the path to the event
+     * @return a list of actions
+     */
     private static List<IAction> parseActionsNode(Node actionsNode, String eventPath) {
         List<IAction> eventActions = new ArrayList<>();
         NodeList actionsChildren = actionsNode.getChildNodes();
@@ -104,6 +122,18 @@ public class EventParser {
         }
         return eventActions;
     }
+
+    /**
+     * parses the text node, the text of the event
+     * @param textNode the text
+     * @param eventPath the path to the event
+     * @return the text of the event
+     */
     private static String parseTextNode(Node textNode, String eventPath){return textNode.getTextContent();}
+    /**
+     * gets the event node
+     * @param doc the document
+     * @return the event node
+     */
     private static Node getEventNode(Document doc){return doc.getElementsByTagName("event").item(0);}
 }
