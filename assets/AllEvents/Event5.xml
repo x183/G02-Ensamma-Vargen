@@ -11,7 +11,7 @@
     </text>
     <actions>
         <battle name=" Try to kill the rabbit" nexteventfile="assets/AllEvents/Event18.xml">
-            <enemy name=" Rabbit" Strength = "1" armor="0" health = "1" isHostile ="false"/>
+            <enemy name=" Rabbit" strength = "1" armor="0" health = "1" isHostile ="false"/>
         </battle>
         <choice name=" Leave it alone and go back to the open forest space" nexteventfile="assets/AllEvents/Event12.xml">
             <effect />
