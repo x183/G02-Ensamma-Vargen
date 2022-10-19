@@ -11,26 +11,35 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
+/**
+ * Controller for the main menu screen
+ */
 public class MainMenuController{
 
-        //stackpanes
+        /**
+         * all the FXML components of the stage
+         */
         @FXML
         private StackPane mainmenuStackPane;
-
-        //buttons
 
         @FXML
         private Button mainmenuAboutPageButton, mainmenuNewGameButton;
 
-        //background images
         @FXML
         private ImageView mainmenuBG;
 
+        /**
+         * method to load the about page, called when the about button is pressed
+         */
         public void pressedAboutPageButton() throws Exception{
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/AboutPage.fxml")));
                 Stage aboutStage = (Stage) mainmenuAboutPageButton.getScene().getWindow();
                 aboutStage.setScene(new Scene(root));
         }
+
+        /**
+         * method to load the new game page, called when the new game button is pressed
+         */
         public void pressedNewGamePageButton() throws Exception{
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/NewGame.fxml")));
                 Stage aboutStage = (Stage) mainmenuNewGameButton.getScene().getWindow();
