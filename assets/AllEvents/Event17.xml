@@ -5,7 +5,7 @@
         Thank you for playing *insert heart*
     </text>
     <actions>
-        <choice name=" Back to main menu" nexteventfile="">
+        <choice name=" Back to main menu" nexteventfile="assets/AllEvents/startEvent.xml">
             <effect />
         </choice>
     </actions>
