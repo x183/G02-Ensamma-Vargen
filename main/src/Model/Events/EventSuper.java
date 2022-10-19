@@ -23,7 +23,6 @@ public abstract class EventSuper {
         return choiceEvents.get(choice);
     }
 
-
     public List<EventSuper> getChoiceEvents()
     {
         return choiceEvents;

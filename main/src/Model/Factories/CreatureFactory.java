@@ -14,7 +14,7 @@ public class CreatureFactory
     }
         public static Creature createRabbit()
         {
-            return new Creature(false, 1, 0, "Rabbit", 0);
+            return new Creature(false, 1, 1, "Rabbit", 0);
         }
         public static Creature createOrc()
         {
