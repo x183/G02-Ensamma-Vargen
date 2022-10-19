@@ -19,8 +19,5 @@
         <battle name=" Lay down and continue sleeping" nexteventfile="assets/AllEvents/Event6.xml">
             <enemy name=" reaper" strength = "9001" armor= "9001" health = "1000" isHostile = "true"/>
         </battle>
-        <choice name=" Test fight" nexteventfile="assets/AllEvents/testBattle.xml">
-            <effect />
-        </choice>
     </actions>
 </event>

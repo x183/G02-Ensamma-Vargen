@@ -9,8 +9,9 @@
 
     </text>
     <actions>
-        <choice name=" Press 0 to prepare yourself for the charging enemy!" nexteventfile="assets/AllEvents/Event9.xml">
+            <battle name=" Prepare yourself for the charging enemy!" nexteventfile="assets/AllEvents/Event13.xml">
+                <enemy name=" Orc" strength = "3" armor= "1" health = "2" isHostile = "true"/>
+            </battle>
             <effect />
-        </choice>
     </actions>
 </event>
