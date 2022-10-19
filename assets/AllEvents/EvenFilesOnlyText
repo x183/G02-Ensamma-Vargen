@@ -1,0 +1,123 @@
+Only text for all the events and how they relate to each other.
+
+
+1. Start
+You wake up alone in a dark forest. You can’t remember what you were doing there.  Or.. even who you are. You look through your clothes after clues, and find a letter in your pocket. It’s ripped, but you manage to read “ *NAME* please, you have to help me find her before it’s too late”.
+Find who? and who wrote this? At least you know your name now, if the letter is even for you..
+You look around and see a trail to your right and a trail to your left. The left trail seems to be leading toward a deeper part of the forest. The right trail is leading towards a huge mountain you are pretty sure you haven’t seen before.
+Are you even in your village anymore?
+
+What would you like to do?
+A: Look around even more where you are right now → 2
+B: Go towards the left path → 3
+C: Go towards the right path → 4
+D: Lay down and continue sleeping → 6
+
+2. Look around
+You can’t seem to find anything more interesting in the space here. However, you hear something rattling in a nearby bush
+
+What would you like to do?
+A: Walk closer to the bush and investigate → 5
+B: Go towards the left path → 3
+C: Go towards the right path → 4
+
+3. Left path
+You walk down the trail for what seems like forever. Is this the right way? About an hour has passed and the forest seems to only get darker. The trail is getting more and more narrow until it’s barely a trodden path. Suddenly you can’t see the path anymore, you turn around and all you see is the deep, dark forest. Where did you come from? Where did you go? Where did you come from Cotton Eyed Joe?
+
+What would you like to do?
+A: Continue walking deeper in the forest where you -think- you were heading → 8
+B: Turn back and try to find the path again → 7
+
+4. Right path
+You turn right, because right is right, right?
+You walk for about an hour or two, before the path suddenly gets wider and wider. You continue walking and the ground goes from being a dirt path to cobblestone, and the trees grow more and more sparse. The path leads you to another crossroad. To the left, the path seems to go back towards the forest, to the right an endless cobblestone path as far as you can see.
+
+What would you like to do?
+A: Go left towards the forest path → 3
+B: Go right towards the endless cobblestone path → 10
+
+5. Look in bush
+You walk closer to the bush, it sounds like a small creature moving around. You walk even closer and peek through the twigs. A rabbit is looking up at you. Your empty stomach is reminding you that you can’t remember when you last ate something. You realize that if you want to kill the small creature, you better act quickly!
+
+What would you like to do?
+A: Try to kill the rabbit
+	if won →18
+	if lost → deathEvent
+B: Leave it alone and go back to the open forest space → 12
+
+6. Sleeping death
+You fall asleep easily.
+During the night an evil creature emerged from the forest and ate you up.
+You died, better luck in another life!
+
+A: Quit game
+B: Try again
+
+7. Orc battle
+You continue walking through the dark forest, you are most certainly lost.. You get reminded about the fact that people need food and water to survive, and you have neither.. However, that is the least of your problems, and you forget everything about your hunger as you hear a roar from one of the bushes.
+You don’t even have the time to think about running away before the foe charges towards you. It’s time to fight for your life
+
+A: Prepare yourself for the charging enemy!
+	if won → 13
+	if lost → deathEvent
+
+
+8. Back on track
+You turn back, and by some kind of miracle you find your way back to where you woke up. It’s getting late but you still have at least a few hours before the forest will be too dark to explore.
+
+What would you like to do?
+A: Look around even more where you are right now → 2
+B: Go towards the left path → 3
+C: Go towards the right path → 4
+
+
+
+10. Cobblestone path
+You walk down the cobblestone path, you start to get tired and your feet hurt. Just as you are about to take a short rest after walking up the biggest hill you have ever seen, you see a village with a huge mountain behind it.
+
+What would you like to do?
+
+A: Continue walking towards the village → 17
+
+12. Open forest
+You are standing in the open area in the forest. You look around and see a trail to your right and a trail to your left. The left trail seems to be leading toward a deeper part of the forest. The right trail is leading towards a huge mountain you are pretty sure you haven’t seen before.
+
+What would you like to do?
+A: Go towards the left path → 3
+B: Go towards the right path → 4
+
+13. Won battle Orc
+You killed your foe! Well done!
+
+What would you like to do?
+A: Loot the carcass → 15
+B: Walk away from the carcass →17
+
+14. Lost battle
+You got killed by an enemy! Better luck next time!
+
+A:Back to main menu
+
+15. Loot carcass 1
+You find nothing :(
+Filthy orcsies
+
+A:Continue your adventure →17
+
+16. Loot carcass 2
+You found some meat, and put it in your pocket!
+Tonight you will dine as a king!
+
+A: Continue your adventure →12
+
+17. EndGame
+This is the end of the game as of now!
+
+A: Back to main menu
+
+18. Won battle Rabbit
+You killed your foe! Well done!
+
+What would you like to do?
+A: Loot the carcass → 16
+B: Walk away from the carcass →12
