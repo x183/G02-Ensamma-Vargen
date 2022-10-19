@@ -7,11 +7,9 @@ import Model.Interfaces.util.IObserver;
 import java.util.ArrayList;
 import java.util.List;
 
-//The forrest represent all the events that can happen.
-//The forrest has graph containing all events and how they relate to eachother
 
 /**
- * The event class
+ * The event class, we create events from XML files using a parser
  */
 public class Event extends EventSuper implements IObservable<IAction> {
     private final List<IObserver<IAction>> observers;

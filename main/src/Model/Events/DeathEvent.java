@@ -6,7 +6,10 @@ import Model.Interfaces.IEffect;
 import java.util.ArrayList;
 import java.util.List;
 
-//An event where a choice you have made killed you, or you lost a battle
+
+/**
+ * The death event, currently not used, instead deathEvent has been implemented as an XML file
+ */
 public class DeathEvent extends Event {
 
     protected DeathEvent(String pathToThisEvent, String eventText, List<IAction> actions) {

@@ -6,7 +6,9 @@ import Model.Entities.Player;
 import Model.Events.Event;
 import Model.Interfaces.IAction;
 
-//An event that occurs when the player is battling a creature
+/**
+ * The Battle class, an event that occurs when the player is battling a creature
+ */
 public class Battle implements IAction {
     private final String pathToThisEvent;
     private static String pretext = " Fight";
@@ -15,6 +17,13 @@ public class Battle implements IAction {
     private String flavourText;
     private boolean playerWon;
 
+    /**
+     * Creates a new battle
+     * @param pathToThisEvent the path to this event
+     * @param pathToNextEvent the path to the next event
+     * @param enemy the enemy creature
+     * @param flavourText the flavour text of the battle
+     */
     public Battle(String pathToThisEvent, String pathToNextEvent, String flavourText, Creature enemy){
         this.pathToThisEvent = pathToThisEvent;
         this.pathToNextEvent = pathToNextEvent;
@@ -23,6 +32,10 @@ public class Battle implements IAction {
         playerWon = false;
     }
 
+    /**
+     * evaluateBattle() evaluates the battle between player and enemy
+     * @param player the current player
+     */
     private void evaluateBattle(Player player){
         double enemyDmgTakenPerRound = Math.max(player.getStrength()-enemy.getArmor(), 0);
         double playerDmgTakenPerRound = Math.max(enemy.getStrength()-player.getArmor(), 0);
@@ -34,6 +47,9 @@ public class Battle implements IAction {
     }
 
 
+    /**
+     * performs the battle action and checks who survived
+     */
     @Override
     public void performAction(Player player) {
         evaluateBattle(player);
@@ -41,6 +57,12 @@ public class Battle implements IAction {
 
     }
 
+    /**
+     * getNextEvent() gets the next event
+     * if the enemy name is " reaper" the player has died from natural/unavoidable causes and the game is over. in these
+     * cases the player is sent to a unique event that explains what happened to them, i.e "you fell off a cliff and died"
+     * @return the next event
+     */
     @Override
     public Event getNextEvent()
     {
@@ -52,12 +74,19 @@ public class Battle implements IAction {
 
     }
 
+    /**
+     * getActionName() gets the name of the action as a String
+     * @return the name of the action as String
+     */
     @Override
     public String getActionName()
     {
         return flavourText;
     }
-
+    /**
+     * getPathToThisEvent() gets this event's path
+     * @return the event's path as a String
+     */
     @Override
     public String getPathToThisEvent() {
         return pathToThisEvent;
