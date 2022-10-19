@@ -2,6 +2,9 @@ package Model.Factories;
 
 import Model.Entities.Creature;
 
+/**
+ * creature factory. creates creatures, both hostile and not.
+ */
 public class CreatureFactory
 {
     public static Creature createMonster(boolean isHostile, double Strength, double Health, double Armour, String Name)
