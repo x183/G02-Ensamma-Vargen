@@ -52,6 +52,7 @@ public class ACharacter implements ICharacter {
                         currentHealth -= value;
                 }
                 if(currentHealth<=0){
+                        currentHealth = 0;
                         this.state = CharacterState.DEAD;
                 }
         }
