@@ -1,11 +1,16 @@
 package Model.Entities;
 
-
+/**
+ * The Creature class is the class that represents the creatures, NPCs, in the game. It extends the abstract class ACharacter
+ */
 public class Creature extends ACharacter{
-//Boolean to decide if a creature is hostile or not
-// For example, an orc should be hostile by default but a rabbit shouldn't
+    /**
+     * boolean isHostile, if true the npc is a hostile enemy
+     */
     boolean isHostile;
-// Creatures are all non-playable characters
+    /**
+     * The constructor for the Creature class
+     */
     public Creature(boolean isHostile, double Strength, double Health, String Name, double Armour) {
         super(Strength, Health, Name, Armour);
 
