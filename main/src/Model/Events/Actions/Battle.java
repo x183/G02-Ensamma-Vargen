@@ -46,6 +46,14 @@ public class Battle implements IAction {
         }
     }
 
+    /**
+     * getPlayerWon() returns whether the player won the battle
+     * @return boolean whether the player won the battle
+     */
+    public boolean getPlayerWon(){
+        return playerWon;
+    }
+
 
     /**
      * performs the battle action and checks who survived
@@ -83,6 +91,9 @@ public class Battle implements IAction {
     {
         return flavourText;
     }
+
+
+
     /**
      * getPathToThisEvent() gets this event's path
      * @return the event's path as a String

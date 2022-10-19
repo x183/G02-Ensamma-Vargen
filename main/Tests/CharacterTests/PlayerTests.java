@@ -1,3 +1,5 @@
+package CharacterTests;
+
 import Model.Entities.Player;
 import Model.Factories.PlayerFactory;
 import org.junit.Test;

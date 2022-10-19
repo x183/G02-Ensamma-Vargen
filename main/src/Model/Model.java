@@ -48,6 +48,12 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
     public double getPlayerArmour(){
         return player.getArmor();
     }
+    public double getPlayerHealth(){
+        return player.getmaxHealth();
+    }
+    public String getPlayerName(){
+        return player.getName();
+    }
 
     /**
      * Resets the player to its starting value (used when player dies and wants to restart)
