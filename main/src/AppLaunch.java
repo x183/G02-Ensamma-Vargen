@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * Simple method for choosing what version of the game to launch, GUI or CLI.
+ */
 public class AppLaunch {
     static Scanner sc = new Scanner(System.in);
     static int choice;
@@ -8,6 +11,7 @@ public class AppLaunch {
         while(true) {
             System.out.println("How do you wish to launch? \n for GUI launch, enter 1 \n for console launch, enter 2");
             choice = sc.nextInt();
+
             if (choice == 1) {
                 LoneWolf.main(args);
                 break;

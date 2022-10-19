@@ -9,7 +9,10 @@ import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 
-//Dumb class for making the project run in the terminal :)
+/**
+ * Main method for the version of the game that runs in the console.
+ * Should be simple to understand, and easy to modify.
+ */
 public class CLI {
     public static void main (String[] args ) throws IOException
     {
