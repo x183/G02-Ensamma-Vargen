@@ -109,19 +109,20 @@ public class NewGameController implements Initializable {
         } else if (selectedNameString.equals("")){
             setContinueWarning("You need to choose a name!");
 
-        } else
-        System.out.println(selectedNameString + " is a " + selectedClassString);
-        if(selectedClassString.equals("Warrior")){
-            gameModel = new Model(PlayerFactory.createWarriorPlayer(selectedNameString), Event.getEvent("assets/allEvents/startEvent.xml"));
-        } else if (selectedClassString.equals("Hunter")){
-            gameModel = new Model(PlayerFactory.createHunterPlayer(selectedNameString), Event.getEvent("assets/allEvents/startEvent.xml"));
         } else {
-            gameModel = new Model(PlayerFactory.createPlayer(strengthSpinner.getValue(), 10, armourSpinner.getValue(), selectedNameString), Event.getEvent("assets/allEvents/startEvent.xml"));
+            System.out.println(selectedNameString + " is a " + selectedClassString);
+            if (selectedClassString.equals("Warrior")) {
+                gameModel = new Model(PlayerFactory.createWarriorPlayer(selectedNameString), Event.getEvent("assets/allEvents/startEvent.xml"));
+            } else if (selectedClassString.equals("Hunter")) {
+                gameModel = new Model(PlayerFactory.createHunterPlayer(selectedNameString), Event.getEvent("assets/allEvents/startEvent.xml"));
+            } else {
+                gameModel = new Model(PlayerFactory.createPlayer(strengthSpinner.getValue(), 10, armourSpinner.getValue(), selectedNameString), Event.getEvent("assets/allEvents/startEvent.xml"));
+            }
+            System.out.println(gameModel.getPlayerStrength());
+            System.out.println(gameModel.getPlayerArmour());
+            Model.setGameModel(gameModel);
+            startGameView(Model.getInstance());
         }
-        System.out.println(gameModel.getPlayerStrength());
-        System.out.println(gameModel.getPlayerArmour());
-        Model.setGameModel(gameModel);
-        startGameView(Model.getInstance());
     }
 
     /**
