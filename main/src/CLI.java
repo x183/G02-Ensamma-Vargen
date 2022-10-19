@@ -9,8 +9,14 @@ import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 
-//Dumb class for making the project run in the terminal :)
+/**
+ * Main class for the version of the game that runs in the console.
+ * Should be simple to understand, and easy to modify.
+ */
 public class CLI {
+    /**
+     * Main method for the version of the game that runs in the console.
+     */
     public static void main (String[] args ) throws IOException
     {
         System.out.println("Welcome to the Lone Wolf!\nEnter any symbol into the console to start your adventure!");

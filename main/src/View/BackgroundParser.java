@@ -13,7 +13,15 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+/**
+ * Parses the background XML file and returns a Background object.
+ */
 public class BackgroundParser {
+    /**
+     * Parses the background XML file and returns a Background object.
+     * @param path The path to the background XML file.
+     * @return A Background object.
+     */
     private static Document parseDoc(String path) {
         try {
             DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
@@ -32,8 +40,14 @@ public class BackgroundParser {
             throw new RuntimeException();
         }
     }
+    /**
+     * Gets event node from the XML file.
+     */
     private static Node getEventNode(Document doc){return doc.getElementsByTagName("event").item(0);}
 
+    /**
+     * Parses the image node and returns the path to the image.
+     */
     public static Background ParseBackground(String pathToEvent) {
         Document doc = parseDoc(pathToEvent);
         Node eventNode = getEventNode(doc);

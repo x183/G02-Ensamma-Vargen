@@ -26,6 +26,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+/**
+ * Controller for the new game screen
+ */
 public class NewGameController implements Initializable {
 
     private Model gameModel;
@@ -34,6 +37,9 @@ public class NewGameController implements Initializable {
     private String selectedClassString = "";
     private String selectedNameString = "";
 
+    /**
+     * all the FXML components of the stage
+     */
     @FXML
     private TextFlow createCharacter;
     @FXML
@@ -51,7 +57,9 @@ public class NewGameController implements Initializable {
     @FXML
     private StackPane createClassMain, createYourOwnClass;
 
-
+    /**
+     * selectClass(), connected to the classComboBox, sets the selectedClassString to the selected class
+     */
     @FXML
     void selectClass() {
         this.selectedClassString = classComboBox.getSelectionModel().getSelectedItem();
@@ -60,18 +68,36 @@ public class NewGameController implements Initializable {
         } else
             createYourOwnClass.toBack();
     }
+
+    /**
+     * nameSubmit(), connected to the submitNameButton, gets the input from the textBox then calls on setName() to set the name
+     */
     @FXML
     void nameSubmit(){
         String name = playerName.getText();
         setName(name);
     }
+
+    /**
+     * setName(), sets the selectedNameString to the name provided by nameSubmit()
+     */
     void setName(String name){
         this.selectedNameString = name;
     }
+
+    /**
+     * getGameModel(), returns the gameModel
+     * @return the gameModel
+     */
     Model getGameModel(){
         return gameModel;
     }
 
+    /**
+     * continueButton(), connected to the continue button, checks if the player has selected a class and name, if so
+     * it calls on the createPlayer() method and then loads the game screen by calling on startGameView()
+     * @throws Exception if the game screen cannot be loaded
+     */
     @FXML
     private void continueButton() throws Exception {
         if(selectedNameString.equals("") && selectedClassString.equals("")){
@@ -97,18 +123,34 @@ public class NewGameController implements Initializable {
         Model.setGameModel(gameModel);
         startGameView(Model.getInstance());
     }
+
+    /**
+     * startGameView(), loads the game screen
+     * @param gameModel the model of the game
+     * @throws Exception if the game screen cannot be loaded
+     */
     public void startGameView(Model gameModel) throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/GameView.fxml")));
         Stage aboutStage = (Stage) ExitButton.getScene().getWindow();
         aboutStage.setScene(new Scene(root));
     }
 
+    /**
+     * setContinueWarning(), sets the continueWarning label to the provided string
+     * shows error message if user hasn't selected a class or name
+     * @param warning the string to be set to the continueWarning label
+     */
     private void setContinueWarning(String warning){
         continueWarning.setText(warning);
         continueWarning.setAlignment(Pos.CENTER);
     }
 
 
+    /**
+     * initialize(), sets up the stage for creating your player
+     * @param url required
+     * @param rb required
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         createCharacter = new TextFlow(createCharacterText);
@@ -118,6 +160,9 @@ public class NewGameController implements Initializable {
 
     }
 
+    /**
+     * spinnerSetup(), sets up the spinners for the create your own class
+     */
     private void spinnerSetup(){
         SpinnerValueFactory<Double> valueFactoryStrength = new SpinnerValueFactory.DoubleSpinnerValueFactory(0, 10, 0, 1);
         SpinnerValueFactory<Double> valueFactoryArmour = new SpinnerValueFactory.DoubleSpinnerValueFactory(0, 10, 0, 1);
@@ -125,6 +170,9 @@ public class NewGameController implements Initializable {
         armourSpinner.setValueFactory(valueFactoryArmour);
     }
 
+    /**
+     * exitButton(), connected to the exit button, closes the stage
+     */
     public void pressedExitButton() throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/MainMenu.fxml")));
         Stage aboutStage = (Stage) ExitButton.getScene().getWindow();

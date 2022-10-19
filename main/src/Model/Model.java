@@ -10,15 +10,27 @@ import Model.Interfaces.util.IObserver;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The Model of the game. The model is the part of the game that holds all the data and logic.
+ * The model is the only part of the game that can change the state of the game.
+ * It implements the observer pattern so that the view can subscribe to the model and get notified when the model changes.
+ */
 public class Model implements IObserver<IAction>, IObservable<Event> {
     //private static Model instance = null;
     private final List<IObserver<Event>> observers;
     private Player player;
     private final Player playerBackup;
     private Event currentEvent;
-
+    /**
+     * The model that is initialized through NewGameController
+     */
     public static Model gameModel;
 
+    /**
+     * Constructor of the Model
+     * @param player the player character of the game
+     * @param firstEvent the first event of the game
+     */
     public Model(Player player, Event firstEvent){
         this.player = player;
         this.playerBackup = player;
@@ -36,10 +48,18 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
     public double getPlayerArmour(){
         return player.getArmor();
     }
+
+    /**
+     * Resets the player to its starting value (used when player dies and wants to restart)
+     */
     public void resetPlayer(){
         this.player = playerBackup;
     }
 
+    /**
+     * used to get an instance of the Model
+     * @return returns the instance of the model
+     */
     public static Model getInstance(){
         if (gameModel == null) {
             System.out.println("Model not found, quitting");
@@ -53,12 +73,20 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
 
     }
 
+    /**
+     * subscribe method
+     * @param observer the subscriber
+     */
     @Override
     public void subscribe(IObserver<Event> observer) {
         observers.add(observer);
         notifyObservers(currentEvent);
     }
 
+    /**
+     * notify method for nootifying the subscribers
+     * @param event the event
+     */
     @Override
     public void notifyObservers(Event event) {
         for (IObserver<Event> o : observers) {
@@ -66,6 +94,10 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         }
     }
 
+    /**
+     * update method with choice player has made
+     * @param action choice player has made
+     */
     @Override
     public void update(IAction action) {
         action.performAction(player);
@@ -74,6 +106,10 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
         notifyObservers(currentEvent);
     }
 
+    /**
+     * Select action. Method used when player selects an action in an event
+     * @param i index of the action
+     */
     public void selectAction(int i){
         currentEvent.selectAction(i);
     }

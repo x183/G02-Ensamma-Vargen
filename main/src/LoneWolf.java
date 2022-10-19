@@ -9,9 +9,15 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
+/**
+ * GUI version of Lone Wolf. Uses JavaFX.
+ */
 public class LoneWolf extends Application{
     //static Model model = null;
-
+    /**
+     * Sets the stage for the JavaFX GUI. Loads the FXML file and sets the stage.
+     * Sets the title of the stage and the icon.
+     */
    @Override
    public void start(Stage stage) throws Exception {
        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("View/MainMenu.fxml")));
@@ -23,7 +29,10 @@ public class LoneWolf extends Application{
        stage.setResizable(false);
        stage.show();
    }
-
+    /**
+     * Main method. Simply launches the app and uses JavaFX methods to launch the stage.
+     * @param args
+     */
     public static void main(String[] args) {
         //only to instantiate the model. replace with actual player and event when starting a new game/continuing old save
         Event emptyLaunchEventGUI = EventParser.parse("assets/AllEvents/emptyLaunchEventGUI.xml");

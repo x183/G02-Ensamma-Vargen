@@ -28,11 +28,35 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+/**
+ * Controller for the game screen
+ */
 public class GameViewController implements IObserver<Event>, Initializable {
     private Model gameModel;
     private NewGameController parentController;
+
+    /**
+     * all the FXML components of the stage
+     */
     @FXML
     private Pane mainPane;
+    @FXML
+    private TextArea textBox;
+
+    @FXML
+    private TextFlow eventTextFlow;
+
+    @FXML
+    private Label eventLabel;
+
+    @FXML
+    private ImageView GameImage, Cross;
+
+    @FXML
+    private Button ChoiceButton1, ChoiceButton2, ChoiceButton3, ChoiceButton4, ExitButton;
+    /**
+     * updates the game screen when the model is updated
+     */
     @Override
     public void update(Event event) {
         updateEventText(event);
@@ -65,6 +89,9 @@ public class GameViewController implements IObserver<Event>, Initializable {
         }
     }
 
+    /**
+     * updates the text on the screen
+     */
     void updateEventText(Event event) {
         eventLabel.setText(event.getEventText());
       /*  eventTextFlow.getChildren().clear();
@@ -72,21 +99,10 @@ public class GameViewController implements IObserver<Event>, Initializable {
         eventTextFlow.getChildren().add(text); */
     }
 
-    @FXML
-    private TextArea textBox;
 
-    @FXML
-    private TextFlow eventTextFlow;
-
-    @FXML
-    private Label eventLabel;
-
-    @FXML
-    private ImageView GameImage, Cross;
-
-    @FXML
-    private Button ChoiceButton1, ChoiceButton2, ChoiceButton3, ChoiceButton4, ExitButton;
-
+    /**
+     * sets the model for the controller and the background of the mainPane
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //Model.getInstance().subscribe(this);
@@ -96,12 +112,19 @@ public class GameViewController implements IObserver<Event>, Initializable {
 
     }
 
+    /**
+     * returns to the main menu when back button is pressed
+     */
     public void pressedExitButton() throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/MainMenu.fxml")));
         Stage aboutStage = (Stage) ExitButton.getScene().getWindow();
         aboutStage.setScene(new Scene(root));
     }
 
+    /**
+     * Pressed the choice 1 button
+     * @throws Exception if the button is pressed when there is no choice 1
+     */
     public void pressedChoiceButton1() throws Exception {
         if(Model.getInstance().getActionName(0).equals(" Restart")){
             Model.getInstance().resetPlayer();
@@ -110,15 +133,30 @@ public class GameViewController implements IObserver<Event>, Initializable {
         }
         Model.getInstance().selectAction(0);
     }
+
+    /**
+     * Pressed the choice 2 button
+     * @throws Exception if the button is pressed when there is no choice 2
+     */
     public void pressedChoiceButton2() throws Exception {
         if(Model.getInstance().getActionName(1).equals(" Quit Game")){
             pressedExitButton();
         } else
         Model.getInstance().selectAction(1);
     }
+
+    /**
+     * Pressed the choice 3 button
+     * @throws Exception if the button is pressed when there is no choice 3
+     */
     public void pressedChoiceButton3() {
         Model.getInstance().selectAction(2);
     }
+
+    /**
+     * Pressed the choice 4 button
+     * @throws Exception if the button is pressed when there is no choice 4
+     */
     public void pressedChoiceButton4() {
         Model.getInstance().selectAction(3);
     }
