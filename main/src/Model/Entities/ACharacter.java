@@ -115,4 +115,6 @@ public class ACharacter implements ICharacter {
                 return this.Armor;
         }
 
+        public void performAction() {
+        }
 }
