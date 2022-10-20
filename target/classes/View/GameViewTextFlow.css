@@ -34,4 +34,5 @@
     font-family: Perpetua, sans-serif;
     font-size: 18px;
     color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
