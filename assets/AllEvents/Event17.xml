@@ -2,7 +2,7 @@
 <event background="assets/images/youwon.png">
     <text>
         This is the end of the game as of now!
-        Thank you for playing *insert heart*
+        Thank you for playing!
     </text>
     <actions>
         <choice name=" Back to main menu" nexteventfile="assets/AllEvents/startEvent.xml">
