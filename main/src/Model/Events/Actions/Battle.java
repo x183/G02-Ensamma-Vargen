@@ -37,6 +37,7 @@ public class Battle implements IAction {
      * @param player the current player
      */
     private void evaluateBattle(Player player){
+       // System.out.println(player.getCurrentHealth());
         double enemyDmgTakenPerRound = Math.max(player.getStrength()-enemy.getArmor(), 0);
         double playerDmgTakenPerRound = Math.max(enemy.getStrength()-player.getArmor(), 0);
 

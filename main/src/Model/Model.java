@@ -60,6 +60,7 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
      */
     public void resetPlayer(){
         this.player = playerBackup;
+       // System.out.println(player.getCurrentHealth());
     }
 
     /**
@@ -106,6 +107,7 @@ public class Model implements IObserver<IAction>, IObservable<Event> {
      */
     @Override
     public void update(IAction action) {
+       // System.out.println(player.getCurrentHealth());
         action.performAction(player);
         currentEvent = action.getNextEvent();
         currentEvent.subscribe(this);
