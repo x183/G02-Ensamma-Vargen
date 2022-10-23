@@ -103,14 +103,6 @@ public class Event extends EventSuper implements IObservable<IAction> {
         return eventText;
     }
 
-    /**
-     * getGameOverEvent, gets the game over event (not used currently, 2022-10-19)
-     * @param message the message to display
-     * @return  the game over event
-     */
-    public static Event getGameOverEvent(String message) {
-        return new Event("assets/AllEvents/deathEvent.xml", message, new ArrayList<>());
-    }
 
     /**
      * getPathToThisEvent, gets the path to this event

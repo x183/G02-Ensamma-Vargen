@@ -53,7 +53,6 @@ public class EventParser {
         Document doc = parseDoc(eventPath);
 
         Node eventNode = getEventNode(doc);
-        //eventNode.getAttributes().getNamedItem("img").getNodeValue();
         NodeList eventChildren = eventNode.getChildNodes();
         String eventText = "Text wasn't initialized";
         List<IAction> eventActions = new ArrayList<>();
@@ -107,8 +106,6 @@ public class EventParser {
                             double armor = Double.parseDouble(childAttributes.getNamedItem("armor").getNodeValue());
                             double health = Double.parseDouble(childAttributes.getNamedItem("health").getNodeValue());
                             boolean isHostile = Boolean.parseBoolean(childAttributes.getNamedItem("isHostile").getNodeValue());
-                           // wrong place- boolean resultsInDeath = Boolean.parseBoolean(childAttributes.getNamedItem("resultsInDeath").getNodeValue());
-                           // creature = new Creature(name, isHostile, hp, str, armor);
                             creature = CreatureFactory.createMonster(isHostile, strength, health, armor, name);
                         }
                     }
