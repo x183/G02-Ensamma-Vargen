@@ -54,8 +54,9 @@ public class BackgroundParser {
         NamedNodeMap eventNodeAttributes = eventNode.getAttributes();
         try{
             String pathToImage = eventNodeAttributes.getNamedItem("background").getNodeValue();
+            System.out.println(pathToImage);
             return new Background(new BackgroundImage(
-                    new Image(System.getProperty("user.dir") + "/" +pathToImage),
+                    new Image(System.getProperty("user.dir") + "/" + pathToImage),
                     null,
                     null,
                     null,

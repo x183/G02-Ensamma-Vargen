@@ -10,7 +10,7 @@
     </text>
     <actions>
             <battle name=" Prepare yourself for the charging enemy!" nexteventfile="assets/AllEvents/Event13.xml">
-                <enemy name=" Orc" strength = "3" armor= "1" health = "2" isHostile = "true"/>
+                <enemy name=" Orc" strength = "10" armor= "5" health = "5" isHostile = "true"/>
             </battle>
             <effect />
     </actions>
