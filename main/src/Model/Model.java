@@ -16,7 +16,6 @@ import java.util.List;
  * It implements the observer pattern so that the view can subscribe to the model and get notified when the model changes.
  */
 public class Model implements IObserver<IAction>, IObservable<Event> {
-    //private static Model instance = null;
     private final List<IObserver<Event>> observers;
     private Player player;
     private final Player playerBackup;
