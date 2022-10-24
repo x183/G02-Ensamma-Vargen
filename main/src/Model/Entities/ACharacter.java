@@ -29,8 +29,6 @@ public abstract class ACharacter implements ICharacter {
                 this.Name = Name;
                 this.Armor = Armor;
                 this.state = CharacterState.ALIVE;
-
-
         }
 
         /**
