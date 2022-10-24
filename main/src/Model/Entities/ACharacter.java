@@ -7,7 +7,7 @@ import Model.Interfaces.ICharacter;
 /**
  * The ACharacter class is the abstract class that represents the characters in the game. It implements the interface ICharacter
  */
-public class ACharacter implements ICharacter {
+public abstract class ACharacter implements ICharacter {
         /**
          * Variables that all ACharacters must have
          */
