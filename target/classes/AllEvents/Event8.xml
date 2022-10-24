@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event background="assets/images/newgamebg.png">
+    <text>
+        You turn back, and by some kind of miracle you find your way back to where you woke up.
+        It’s getting late but you still have at least a few hours before the forest will be too dark to explore.
+
+        What would you like to do?
+    </text>
+    <actions>
+        <choice name=" Look around even more where you are right now" nexteventfile="assets/AllEvents/Event2.xml">
+            <effect />
+        </choice>
+        <choice name=" Go towards the left path" nexteventfile="assets/AllEvents/Event3.xml">
+            <effect />
+        </choice>
+        <choice name=" Go towards the right path" nexteventfile="assets/AllEvents/Event4.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

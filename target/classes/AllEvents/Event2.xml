@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event background="assets/images/newgamebg.png">
+    <text>
+        You can’t seem to find anything more interesting in the space here. However, you hear something rattling in a nearby bush
+    </text>
+    <actions>
+        <choice name=" Walk closer to the bush and investigate" nexteventfile="assets/AllEvents/Event5.xml">
+            <effect />
+        </choice>
+        <choice name=" Go towards the left path" nexteventfile="assets/AllEvents/Event3.xml">
+            <effect />
+        </choice>
+        <choice name=" Go towards the right path" nexteventfile="assets/AllEvents/Event4.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

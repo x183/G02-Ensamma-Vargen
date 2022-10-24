@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event background="assets/images/Forestpath.png">
+    <text>
+        You are standing in the open area in the forest.
+        You look around and see a trail to your right and a trail to your left.
+        The left trail seems to be leading toward a deeper part of the forest.
+        The right trail is leading towards a huge mountain you are pretty sure you haven’t seen before
+    </text>
+    <actions>
+        <choice name=" Go towards the left path" nexteventfile="assets/AllEvents/Event3.xml">
+            <effect />
+        </choice>
+        <choice name=" Go towards the right path" nexteventfile="assets/AllEvents/Event4.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

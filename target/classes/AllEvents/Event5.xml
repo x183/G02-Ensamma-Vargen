@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event background="assets/images/Smallrabbit.png">
+    <text>
+        You walk closer to the bush, it sounds like a small creature moving around.
+        You walk even closer and peek through the twigs. A rabbit is looking up at you.
+        Your empty stomach is reminding you that you can’t remember when you last ate something.
+        You realize that if you want to kill the small creature, you better act quickly!
+
+        What would you like to do?
+
+    </text>
+    <actions>
+        <battle name=" Try to kill the rabbit" nexteventfile="assets/AllEvents/Event18.xml">
+            <enemy name=" Rabbit" strength = "1" armor="0" health = "1" isHostile ="false"/>
+        </battle>
+        <choice name=" Leave it alone and go back to the open forest space" nexteventfile="assets/AllEvents/Event12.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

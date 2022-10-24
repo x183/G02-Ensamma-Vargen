@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event background="assets/images/death5.png">
+    <text>
+        Your player character has died. Do you want to restart or quit?
+    </text>
+    <actions>
+        <choice name=" Restart" nexteventfile="assets/AllEvents/startEvent.xml">
+            <effect />
+        </choice>
+        <choice name=" Quit Game" nexteventfile="">
+            <effect />
+        </choice>
+    </actions>
+</event>

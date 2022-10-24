@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event>
+    <text>
+        You got killed by an enemy! Better luck next time!
+    </text>
+    <actions>
+        <choice name=" VAL1" nexteventfile="assets/AllEvents/VAL1.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

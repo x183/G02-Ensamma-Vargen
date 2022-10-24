@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event background="assets/images/victory.png">
+    <text>
+        You killed your foe! Well done!
+
+        What would you like to do?
+    </text>
+    <actions>
+        <choice name=" Loot the carcass" nexteventfile="assets/AllEvents/Event16.xml">
+            <effect />
+        </choice>
+        <choice name=" Walk away from the carcass" nexteventfile="assets/AllEvents/Event12.xml">
+            <effect />
+        </choice>
+    </actions>
+</event>

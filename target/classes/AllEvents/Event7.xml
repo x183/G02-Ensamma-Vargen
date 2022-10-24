@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<event background="assets/images/Scaryorc.png">
+    <text>
+        You continue walking through the dark forest, you are most certainly lost..
+        You get reminded about the fact that people need food and water to survive, and you have neither..
+        However, that is the least of your problems, and you forget everything about your hunger as you hear a roar from one of the bushes.
+        You don’t even have the time to think about running away before the foe charges towards you.
+        It’s time to fight for your life
+
+    </text>
+    <actions>
+            <battle name=" Prepare yourself for the charging enemy!" nexteventfile="assets/AllEvents/Event13.xml">
+                <enemy name=" Orc" strength = "10" armor= "5" health = "5" isHostile = "true"/>
+            </battle>
+            <effect />
+    </actions>
+</event>
