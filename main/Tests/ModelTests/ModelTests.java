@@ -1,7 +1,7 @@
 package ModelTests;
 
-import Model.Entities.Player;
-import Model.Events.Event;
+import com.LoneWolf.Model.Entities.Player;
+import com.LoneWolf.Model.Events.Event;
 import Model.Model;
 import org.junit.Test;
 

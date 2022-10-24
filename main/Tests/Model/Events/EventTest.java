@@ -1,6 +1,6 @@
-package Model.Events;
-import Model.Interfaces.IAction;
-import Model.Interfaces.util.IObserver;
+package com.LoneWolf.Model.Events;
+import com.LoneWolf.Model.Interfaces.IAction;
+import com.LoneWolf.Model.Interfaces.util.IObserver;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

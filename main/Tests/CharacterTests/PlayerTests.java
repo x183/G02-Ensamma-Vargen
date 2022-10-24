@@ -1,7 +1,7 @@
 package CharacterTests;
 
-import Model.Entities.Player;
-import Model.Factories.PlayerFactory;
+import com.LoneWolf.Model.Entities.Player;
+import com.LoneWolf.Model.Factories.PlayerFactory;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

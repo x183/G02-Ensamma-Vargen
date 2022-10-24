@@ -1,6 +1,6 @@
 package ParserTests;
 
-import Model.Events.Event;
+import com.LoneWolf.Model.Events.Event;
 import View.BackgroundParser;
 import javafx.scene.layout.Background;
 import org.junit.Test;

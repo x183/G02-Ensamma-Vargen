@@ -1,8 +1,8 @@
 package ModelTests;
 
-import Model.Entities.Creature;
-import Model.Entities.Player;
-import Model.Events.Actions.Battle;
+import com.LoneWolf.Model.Entities.Creature;
+import com.LoneWolf.Model.Entities.Player;
+import com.LoneWolf.Model.Events.Actions.Battle;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

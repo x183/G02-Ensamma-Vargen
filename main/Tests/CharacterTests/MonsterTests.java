@@ -1,7 +1,7 @@
 package CharacterTests;
 
-import Model.Entities.Creature;
-import Model.Factories.CreatureFactory;
+import com.LoneWolf.Model.Entities.Creature;
+import com.LoneWolf.Model.Factories.CreatureFactory;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
